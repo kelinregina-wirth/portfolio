@@ -1,37 +1,643 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Kelin Regina</title>
-<style>
-body{
-    font-family:Arial,sans-serif;
-    background:#111;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelin Regina | Portfólio de Marketing & Conteúdo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- PALETA DE CORES E VARIÁVEIS --- */
+        :root {
+            --bg-principal: #fafafa; /* Off-white */
+            --bg-card: #ffffff; /* Branco puro */
+            --texto-principal: #111827; /* Preto sofisticado */
+            --texto-secundario: #4b5563; /* Cinza elegante */
+            --cor-detalhe: #c5a85c; /* Dourado */
+            --cor-primaria: #14532d; /* Verde-escuro */
+            --borda: #e5e7eb;
+        }
 
-h1{
-    font-size:60px;
-}
+        /* --- ESTILOS GERAIS --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
 
-p{
-    font-size:24px;
-    opacity:.8;
-}
-</style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-principal);
+            color: var(--texto-principal);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .titulo-secao {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: -0.03em;
+        }
+
+        .titulo-secao span {
+            color: var(--cor-detalhe);
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            background-color: rgba(250, 250, 250, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            color: var(--cor-primaria);
+        }
+
+        .logo span {
+            color: var(--cor-detalhe);
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--texto-secundario);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-primaria);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+            min-height: 75vh;
+            padding-top: 60px;
+        }
+
+        .hero-conteudo h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.04em;
+            margin-bottom: 15px;
+            color: var(--cor-primaria);
+        }
+
+        .hero-conteudo h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--cor-detalhe);
+            margin-bottom: 20px;
+        }
+
+        .hero-conteudo p {
+            font-size: 1.15rem;
+            color: var(--texto-secundario);
+            margin-bottom: 35px;
+            max-width: 580px;
+        }
+
+        .botoes-grupo {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primario {
+            background-color: var(--cor-primaria);
+            color: #ffffff;
+        }
+
+        .btn-primario:hover {
+            background-color: #0f3f22;
+            transform: translateY(-2px);
+        }
+
+        .btn-secundario {
+            border: 1px solid var(--cor-detalhe);
+            color: var(--texto-principal);
+            background-color: transparent;
+        }
+
+        .btn-secundario:hover {
+            background-color: var(--cor-detalhe);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-imagem {
+            display: flex;
+            justify-content: center;
+        }
+
+        .foto-perfil {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--cor-detalhe);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        /* --- SOBRE MIM --- */
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 60px;
+        }
+
+        .sobre-texto p {
+            color: var(--texto-secundario);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .sobre-meta-dados {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--borda);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .meta-item {
+            font-size: 1rem;
+        }
+
+        .meta-item strong {
+            color: var(--cor-primaria);
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+
+        /* --- NUMEROS --- */
+        .numeros-bg {
+            background-color: var(--cor-primaria);
+            color: white;
+        }
+
+        .numeros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .numero-card h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--cor-detalhe);
+            margin-bottom: 5px;
+        }
+
+        .numero-card p {
+            font-size: 1rem;
+            color: #e2e8f0;
+        }
+
+        /* --- O QUE FAÇO (SERVIÇOS) --- */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .servico-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--borda);
+            padding: 30px 25px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .servico-card:hover {
+            border-color: var(--cor-detalhe);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+        }
+
+        .servico-icone {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .servico-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* --- PROJETOS EM DESTAQUE --- */
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        .projeto-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--borda);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+
+        .projeto-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--cor-detalhe);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.04);
+        }
+
+        .projeto-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .projeto-info h3 {
+            font-size: 1.4rem;
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+        }
+
+        .projeto-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: #f0fdf4;
+            color: var(--cor-primaria);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #dcfce7;
+        }
+
+        .projeto-detalhes {
+            list-style: none;
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .projeto-detalhes li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .projeto-detalhes li::before {
+            content: "•";
+            color: var(--cor-detalhe);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* --- HABILIDADES --- */
+        .hab-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hab-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .hab-tag {
+            background-color: var(--bg-card);
+            border: 1px solid var(--borda);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .hab-tag:hover {
+            background-color: var(--cor-primaria);
+            color: white;
+            border-color: var(--cor-primaria);
+        }
+
+        /* --- CONTATO --- */
+        .contato-wrapper {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contato-wrapper p {
+            color: var(--texto-secundario);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contato-botoes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-contato-link {
+            background-color: var(--bg-card);
+            border: 1px solid var(--borda);
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-contato-link:hover {
+            border-color: var(--cor-detalhe);
+            background-color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--borda);
+            font-size: 0.9rem;
+            color: var(--texto-secundario);
+            background-color: #ffffff;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; text-align: center; min-height: auto; }
+            .hero-conteudo p { margin-left: auto; margin-right: auto; }
+            .botoes-grupo { justify-content: center; }
+            .hero-imagem { order: -1; margin-bottom: 20px; }
+            .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+            .projetos-grid { grid-template-columns: 1fr; }
+            .nav-container { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div>
-<h1>Kelin Regina</h1>
-<p>Meu portfólio está em construção 🚀</p>
-</div>
+    <header>
+        <div class="nav-container">
+            <div class="logo">kelin<span>regina</span></div>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#o-que-faco">Atuação</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-conteudo">
+                <h1>Kelin Regina</h1>
+                <h2>Especialista em Marketing Digital, Content Marketing e Copywriting</h2>
+                <p>Transformando estratégia em conteúdo que conecta marcas e pessoas de forma autêntica e altamente focada em resultados.</p>
+                <div class="botoes-grupo">
+                    <a href="#projetos" class="btn btn-primario">Ver projetos</a>
+                    <a href="#contato" class="btn btn-secundario">Entrar em contato</a>
+                </div>
+            </div>
+            <div class="hero-imagem">
+                <img src="assets/foto.jpg" alt="Foto de Kelin Regina" class="foto-perfil" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop'">
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2 class="titulo-secao">Sobre <span>Mim</span></h2>
+            <div class="sobre-grid">
+                <div class="sobre-texto">
+                    <p>Sou profissional de Marketing e Comunicação com experiência em produção de conteúdo, copywriting, SEO, gestão de comunicação e estratégias digitais.</p>
+                    <p>Ao longo da minha carreira desenvolvi projetos para empresas dos setores agro, financeiro e corporativo, sempre focada em transformar objetivos de negócio em conteúdo que gera resultados e cria engajamento genuíno.</p>
+                </div>
+                <div class="sobre-meta-dados">
+                    <div class="meta-item">
+                        <strong>Localização</strong>
+                        📍 Chapecó – SC
+                    </div>
+                    <div class="meta-item">
+                        <strong>Experiência</strong>
+                        🚀 +5 Anos de Atuação
+                    </div>
+                    <div class="meta-item">
+                        <strong>Foco de Atuação</strong>
+                        💼 Comunicação Corporativa & Agro
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="numeros-bg">
+            <section style="padding: 60px 20px;">
+                <div class="numeros-grid">
+                    <div class="numero-card">
+                        <h3>+500</h3>
+                        <p>Conteúdos Produzidos</p>
+                    </div>
+                    <div class="numero-card">
+                        <h3>+300</h3>
+                        <p>Artigos Publicados</p>
+                    </div>
+                    <div class="numero-card">
+                        <h3>+5</h3>
+                        <p>Anos de Experiência</p>
+                    </div>
+                    <div class="numero-card">
+                        <h3>Nacional</h3>
+                        <p>Projetos p/ Grandes Empresas</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="o-que-faco">
+            <h2 class="titulo-secao">O Que <span>Faço</span></h2>
+            <div class="servicos-grid">
+                <div class="servico-card"><span class="servico-icone">✍️</span><h3>Copywriting</h3></div>
+                <div class="servico-card"><span class="servico-icone">📈</span><h3>Marketing Digital</h3></div>
+                <div class="servico-card"><span class="servico-icone">🔍</span><h3>SEO</h3></div>
+                <div class="servico-card"><span class="servico-icone">📱</span><h3>Gestão de Redes</h3></div>
+                <div class="servico-card"><span class="servico-icone">📰</span><h3>Produção de Conteúdo</h3></div>
+                <div class="servico-card"><span class="servico-icone">🎥</span><h3>Roteiros para Vídeo</h3></div>
+                <div class="servico-card"><span class="servico-icone">📊</span><h3>Plan. Estratégico</h3></div>
+                <div class="servico-card"><span class="servico-icone">💼</span><h3>Comunicação Corp.</h3></div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2 class="titulo-secao">Projetos em <span>Destaque</span></h2>
+            <div class="projetos-grid">
+
+                <div class="projeto-card">
+                    <div class="projeto-info">
+                        <h3>Redesul Consórcios</h3>
+                        <div class="projeto-tags">
+                            <span class="tag">Estratégia de Conteúdo</span>
+                            <span class="tag">Redes Sociais</span>
+                            <span class="tag">Copywriting</span>
+                        </div>
+                        <ul class="projeto-detalhes">
+                            <li>Desenvolvimento e maturação do tom de voz institucional.</li>
+                            <li>Criação de copys focadas em conversão financeira.</li>
+                            <li>Alinhamento de estratégias criativas de engajamento social.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-info">
+                        <h3>Venko Credit</h3>
+                        <div class="projeto-tags">
+                            <span class="tag">Planejamento Editorial</span>
+                            <span class="tag">Conteúdo Digital</span>
+                            <span class="tag">Gestão de Comunicação</span>
+                        </div>
+                        <ul class="projeto-detalhes">
+                            <li>Estruturação de cronogramas integrados de publicação.</li>
+                            <li>Posicionamento de marca digital focado no setor corporativo.</li>
+                            <li>Gestão completa do fluxo de canais e assessoria.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-info">
+                        <h3>Rotoline</h3>
+                        <div class="projeto-tags">
+                            <span class="tag">Blog Posts</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Conteúdo Institucional</span>
+                        </div>
+                        <ul class="projeto-detalhes">
+                            <li>Redação técnica otimizada para buscadores (Google).</li>
+                            <li>Criação de artigos pautados em autoridade industrial.</li>
+                            <li>Aumento no fluxo orgânico de leads qualificados.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-info">
+                        <h3>Life Agro</h3>
+                        <div class="projeto-tags">
+                            <span class="tag">Agronegócio</span>
+                            <span class="tag">Inbound Marketing</span>
+                            <span class="tag">Blog especializado</span>
+                        </div>
+                        <ul class="projeto-detalhes">
+                            <li>Produção de conteúdo altamente segmentado para o produtor rural.</li>
+                            <li>Gestão de funis de marketing de conteúdo especializados.</li>
+                            <li>Artigos densos traduzindo soluções técnicas de forma acessível.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2 class="titulo-secao">Minhas <span>Habilidades</span></h2>
+            <div class="hab-container">
+                <div class="hab-grid">
+                    <div class="hab-tag">SEO</div>
+                    <div class="hab-tag">Copywriting</div>
+                    <div class="hab-tag">WordPress</div>
+                    <div class="hab-tag">Google Analytics</div>
+                    <div class="hab-tag">Meta Ads</div>
+                    <div class="hab-tag">Canva</div>
+                    <div class="hab-tag">Adobe Photoshop</div>
+                    <div class="hab-tag">Adobe Premiere</div>
+                    <div class="hab-tag">CapCut</div>
+                    <div class="hab-tag">IA aplicada ao Marketing</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="contato-wrapper">
+                <h2 class="titulo-secao">Vamos <span>Conversar?</span></h2>
+                <p>Estou sempre disponível para debater novos projetos estratégicos, parcerias e soluções de comunicação inovadoras.</p>
+                <div class="contato-botoes">
+                    <a href="mailto:seu-email@exemplo.com" class="btn-contato-link">✉️ seu-email@exemplo.com</a>
+                    <a href="https://linkedin.com/in/seu-perfil" target="_blank" class="btn-contato-link">💼 Conectar no LinkedIn</a>
+                    <a href="https://wa.me/5549999999999" target="_blank" class="btn-contato-link" style="color: #15803d; font-weight: 600;">💬 Chamar no WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kelin Regina. Desenvolvido com sofisticação e profissionalismo.</p>
+    </footer>
 
 </body>
 </html>
