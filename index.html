@@ -1,794 +1,561 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Kelin Regina | Jornalista & Especialista em Marketing Digital</title>
-    <meta name="description" content="Especialista em transformar conhecimento técnico em comunicação estratégica capaz de gerar autoridade, relacionamento e resultados. Conheça meu portfólio.">
-    <meta name="keywords" content="Kelin Regina, Jornalista, Marketing Digital, Content Marketing, SEO, Copywriting, Comunicação Corporativa, Estratégia de Conteúdo">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.kelinregina.com.br">
+    <title>Portfólio | Kelin Regina Wirth</title>
+    <style>
+        /* Paleta Editorial Premium: Minimalista, Tons Terrosos, Ouro Velho e Grafite */
+        :root {
+            --bg-primary: #fcfbfa;
+            --bg-secondary: #f4f1ec;
+            --text-main: #1c1c1c;
+            --text-muted: #5e5e5e;
+            --accent-gold: #b39258;
+            --accent-gold-hover: #967843;
+            --border-color: #e3ded5;
+        }
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.kelinregina.com.br">
-    <meta property="og:title" content="Kelin Regina | Jornalista & Especialista em Marketing Digital">
-    <meta property="og:description" content="Especialista em transformar conhecimento técnico em comunicação estratégica capaz de gerar autoridade, relacionamento e resultados.">
-    <meta property="og:image" content="assets/imagens/kelin-regina.webp">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.kelinregina.com.br">
-    <meta property="twitter:title" content="Kelin Regina | Jornalista & Especialista em Marketing Digital">
-    <meta property="twitter:description" content="Especialista em transformar conhecimento técnico em comunicação estratégica capaz de gerar autoridade, relacionamento e resultados.">
-    <meta property="twitter:image" content="assets/imagens/kelin-regina.webp">
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', serif;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
 
-    <!-- Google Fonts - Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+        /* Container global */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-    <!-- Tailwind Custom Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        premiumBlack: '#111111',
-                        premiumWhite: '#F8F8F8',
-                        premiumGrayLight: '#ECECEC',
-                        premiumGrayText: '#666666',
-                        premiumGold: '#C9A227',
-                    }
-                }
+        /* Seção Hero / Perfil */
+        .hero {
+            padding: 80px 0 60px 0;
+            border-bottom: 1px solid var(--border-color);
+            background-image: linear-gradient(to bottom, #fcfbfa, #f4f1ec);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align: center;
+            justify-items: center;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 200px 1fr;
+                text-align: left;
+                justify-items: start;
+                align-items: center;
             }
         }
-    </script>
 
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F8F8;
-            color: #111111;
-            overflow-x: hidden;
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+            background-color: #eee;
         }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+        .hero-details h1 {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
         }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+
+        .hero-details .subtitle {
+            font-size: 1.15rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
-        ::-webkit-scrollbar {
-            width: 8px;
+
+        .hero-details .location {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
-        ::-webkit-scrollbar-track {
-            background: #F8F8F8;
+
+        /* Ações e Links Corporativos (Sem ícones) */
+        .actions-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #ECECEC;
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             border-radius: 4px;
+            transition: all 0.2s ease;
+            cursor: pointer;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #666666;
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--text-main);
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        /* Seções de Conteúdo */
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 12px;
+            text-transform: capitalize;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-gold);
+        }
+
+        /* Resumo Profissional */
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 24px;
+        }
+
+        /* Grid do Portfólio de Artigos */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 640px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background-color: var(--bg-secondary);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        /* Label Corporativo Puro Texto */
+        .company-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-main);
+            display: inline-block;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--bg-secondary);
+        }
+
+        .card-link:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Lista de Experiências Profissionais Textual */
+        .experience-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .exp-item {
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 24px;
+        }
+
+        .exp-company {
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        .exp-role {
+            font-style: italic;
+            color: var(--accent-gold);
+            margin: 4px 0 8px 0;
+            font-size: 1rem;
+        }
+
+        .exp-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .exp-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 900px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer .meta-text {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
     </style>
-
-    <!-- JSON-LD Schema.org Person -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kelin Regina",
-      "jobTitle": "Jornalista e Especialista em Marketing Digital",
-      "description": "Especialista em transformar conhecimento técnico em comunicação estratégica capaz de gerar autoridade, relacionamento e resultados.",
-      "knowsAbout": ["Content Marketing", "SEO", "Copywriting", "Comunicação Corporativa", "Marketing Digital"],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Unochapecó"
-      }
-    }
-    </script>
 </head>
-<body class="antialiased selection:bg-[#C9A227] selection:text-white">
+<body>
 
-    <!-- Header / Barra Superior -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-premiumBlack flex items-center gap-2">
-                Kelin Regina<span class="text-premiumGold">.</span>
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-premiumGrayText">
-                <a href="#sobre" class="hover:text-premiumBlack transition-colors duration-200">Sobre</a>
-                <a href="#experiencia" class="hover:text-premiumBlack transition-colors duration-200">Experiência</a>
-                <a href="#cases" class="hover:text-premiumBlack transition-colors duration-200">Cases</a>
-                <a href="#artigos" class="hover:text-premiumBlack transition-colors duration-200">Artigos</a>
-                <a href="#formacao" class="hover:text-premiumBlack transition-colors duration-200">Formação</a>
-                <a href="#contato" class="bg-premiumBlack text-premiumWhite px-4 py-2 rounded-full text-xs hover:bg-[#222] transition-all duration-200">Contato</a>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="block md:hidden text-premiumBlack focus:outline-none" aria-label="Abrir Menu">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-premiumWhite z-40 flex flex-col justify-center items-center space-y-8 text-xl font-medium">
-            <button id="close-btn" class="absolute top-6 right-6 text-premiumBlack" aria-label="Fechar Menu">
-                <i data-lucide="x" class="w-8 h-8"></i>
-            </button>
-            <a href="#sobre" class="mobile-link text-premiumGrayText hover:text-premiumBlack">Sobre</a>
-            <a href="#experiencia" class="mobile-link text-premiumGrayText hover:text-premiumBlack">Experiência</a>
-            <a href="#cases" class="mobile-link text-premiumGrayText hover:text-premiumBlack">Cases</a>
-            <a href="#artigos" class="mobile-link text-premiumGrayText hover:text-premiumBlack">Artigos</a>
-            <a href="#formacao" class="mobile-link text-premiumGrayText hover:text-premiumBlack">Formação</a>
-            <a href="#contato" class="mobile-link bg-premiumBlack text-premiumWhite px-6 py-3 rounded-full text-sm">Contato</a>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <img src="ChatGPT Image 11 de jun. de 2026, 19_03_43.png" alt="Kelin Regina Wirth" class="profile-img">
+                <div class="hero-details">
+                    <h1>Kelin Regina Wirth</h1>
+                    <div class="subtitle">Jornalista | Comunicação Empresarial | Marketing</div>
+                    <div class="location">Chapecó, Santa Catarina, Brasil</div>
+                    
+                    <div class="actions-wrapper">
+                        <a href="Kelin_Regina_Wirth_2026.pdf" target="_blank" class="btn btn-primary">Currículo (PDF)</a>
+                        <a href="https://www.linkedin.com/in/kelin-regina-w" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                        <a href="mailto:kelinreginaw@gmail.com" class="btn btn-secondary">Contato Direto</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen pt-32 pb-20 flex items-center px-6 lg:px-12 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
-            
-            <!-- Lado Esquerdo -->
-            <div class="space-y-8">
-                <div class="space-y-2">
-                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-premiumBlack">Kelin Regina</h1>
-                    <p class="text-xl lg:text-2xl font-medium text-premiumGold">Jornalista & Especialista em Marketing Digital</p>
-                </div>
-
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-white border border-premiumGrayLight text-xs text-premiumGrayText rounded-full uppercase tracking-wider font-semibold">Content Marketing</span>
-                    <span class="px-3 py-1 bg-white border border-premiumGrayLight text-xs text-premiumGrayText rounded-full uppercase tracking-wider font-semibold">SEO</span>
-                    <span class="px-3 py-1 bg-white border border-premiumGrayLight text-xs text-premiumGrayText rounded-full uppercase tracking-wider font-semibold">Copywriting</span>
-                    <span class="px-3 py-1 bg-white border border-premiumGrayLight text-xs text-premiumGrayText rounded-full uppercase tracking-wider font-semibold">Comunicação Corporativa</span>
-                </div>
-
-                <div class="space-y-4">
-                    <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight leading-tight text-premiumBlack">
-                        Transformo informação em conteúdo e conteúdo em estratégia.
-                    </h2>
-                    <p class="text-premiumGrayText leading-relaxed max-w-lg">
-                        Especialista em transformar conhecimento técnico em comunicação estratégica capaz de gerar autoridade, relacionamento e resultados.
-                    </p>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#cases" class="px-8 py-4 bg-premiumBlack text-white rounded-full font-medium text-center hover:bg-[#222] transition-all duration-300 shadow-lg shadow-black/5">
-                        Conheça meu trabalho
-                    </a>
-                    <a href="assets/curriculo/Kelin_Regina_CV.pdf" download class="px-8 py-4 bg-white border border-premiumGrayLight text-premiumBlack rounded-full font-medium text-center hover:border-premiumBlack transition-all duration-300 flex items-center justify-center gap-2">
-                        <i data-lucide="download" class="w-4 h-4"></i> Baixar currículo
-                    </a>
-                </div>
-            </div>
-
-            <!-- Lado Direito -->
-            <div class="flex justify-center lg:justify-end">
-                <div class="relative w-full max-w-md lg:max-w-lg aspect-[4/5] bg-premiumGrayLight rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
-                    <img src="assets/imagens/kelin-regina.webp" alt="Kelin Regina" class="w-full h-full object-cover">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Sobre Mim & Impacto em Números -->
-    <section id="sobre" class="py-24 bg-white border-y border-premiumGrayLight">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            
-            <div class="space-y-6 reveal">
-                <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Sobre mim</span>
-                <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-premiumBlack">
-                    Sou jornalista e especialista em marketing digital, apaixonada por transformar conhecimento em conteúdo capaz de fortalecer marcas e aproximar pessoas.
-                </h3>
-                <p class="text-premiumGrayText leading-relaxed">
-                    Minha trajetória passa pelos setores industrial, agronegócio, financeiro e comunicação corporativa, sempre unindo estratégia, SEO, copywriting e criatividade.
-                </p>
-                <p class="text-premiumGrayText font-medium">
-                    Acredito que informação bem estruturada gera confiança, e confiança gera negócios.
-                </p>
-
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-6">
-                    <div class="p-4 bg-premiumWhite border border-premiumGrayLight rounded-xl text-center text-xs font-semibold text-premiumGrayText">SEO</div>
-                    <div class="p-4 bg-premiumWhite border border-premiumGrayLight rounded-xl text-center text-xs font-semibold text-premiumGrayText">Content Marketing</div>
-                    <div class="p-4 bg-premiumWhite border border-premiumGrayLight rounded-xl text-center text-xs font-semibold text-premiumGrayText">Copywriting</div>
-                    <div class="p-4 bg-premiumWhite border border-premiumGrayLight rounded-xl text-center text-xs font-semibold text-premiumGrayText">Comunicação Corporativa</div>
-                    <div class="p-4 bg-premiumWhite border border-premiumGrayLight rounded-xl text-center text-xs font-semibold text-premiumGrayText">Marketing Digital</div>
-                    <div class="p-4 bg-premiumWhite border border-premiumGrayLight rounded-xl text-center text-xs font-semibold text-premiumGrayText">IA aplicada ao Marketing</div>
-                </div>
-            </div>
-
-            <!-- Impacto em Números -->
-            <div class="space-y-8 bg-premiumWhite p-8 lg:p-12 rounded-3xl border border-premiumGrayLight reveal">
-                <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Impacto em Números</span>
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <span class="text-4xl lg:text-5xl font-bold tracking-tight text-premiumBlack counter" data-target="5">+0</span>
-                        <p class="text-xs text-premiumGrayText font-medium uppercase tracking-wider">Anos de Experiência</p>
-                    </div>
-                    <div class="space-y-2">
-                        <span class="text-4xl lg:text-5xl font-bold tracking-tight text-premiumBlack counter" data-target="3">+0</span>
-                        <p class="text-xs text-premiumGrayText font-medium uppercase tracking-wider">Pós-Graduações</p>
-                    </div>
-                    <div class="space-y-2">
-                        <span class="text-4xl lg:text-5xl font-bold tracking-tight text-premiumBlack counter" data-target="4">0</span>
-                        <p class="text-xs text-premiumGrayText font-medium uppercase tracking-wider">Segmentos Atendidos</p>
-                    </div>
-                    <div class="space-y-2">
-                        <span class="text-4xl lg:text-5xl font-bold tracking-tight text-premiumBlack mb-1 inline-block">Dezenas</span>
-                        <p class="text-xs text-premiumGrayText font-medium uppercase tracking-wider">De Artigos Publicados</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Timeline Executive -->
-    <section id="experiencia" class="py-24 max-w-3xl mx-auto px-6">
-        <div class="text-center space-y-4 mb-16 reveal">
-            <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Trajetória</span>
-            <h3 class="text-3xl font-bold tracking-tight text-premiumBlack">Minha Linha do Tempo</h3>
-        </div>
-
-        <div class="relative border-l-2 border-premiumGold ml-4 md:ml-32 space-y-12">
-            
-            <div class="relative pl-8 reveal">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-premiumGold border-4 border-premiumWhite"></div>
-                <div class="bg-white border border-premiumGrayLight rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <span class="text-xs font-semibold text-premiumGrayText">Graduação</span>
-                    <h4 class="text-lg font-bold text-premiumBlack">Jornalismo</h4>
-                    <p class="text-sm text-premiumGold font-medium mb-2">Unochapecó</p>
-                </div>
-            </div>
-
-            <div class="relative pl-8 reveal">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-premiumGold border-4 border-premiumWhite"></div>
-                <div class="bg-white border border-premiumGrayLight rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <span class="text-xs font-semibold text-premiumGrayText">Indústria</span>
-                    <h4 class="text-lg font-bold text-premiumBlack">Rotoline</h4>
-                    <p class="text-sm text-premiumGold font-medium mb-2">Marketing de Conteúdo • SEO • Blog</p>
-                </div>
-            </div>
-
-            <div class="relative pl-8 reveal">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-premiumGold border-4 border-premiumWhite"></div>
-                <div class="bg-white border border-premiumGrayLight rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <span class="text-xs font-semibold text-premiumGrayText">Agronegócio</span>
-                    <h4 class="text-lg font-bold text-premiumBlack">Life Agro</h4>
-                    <p class="text-sm text-premiumGold font-medium mb-2">Marketing • Comunicação</p>
-                </div>
-            </div>
-
-            <div class="relative pl-8 reveal">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-premiumGold border-4 border-premiumWhite"></div>
-                <div class="bg-white border border-premiumGrayLight rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <span class="text-xs font-semibold text-premiumGrayText">Financeiro</span>
-                    <h4 class="text-lg font-bold text-premiumBlack">Redesul</h4>
-                    <p class="text-sm text-premiumGold font-medium mb-2">Marketing Digital</p>
-                </div>
-            </div>
-
-            <div class="relative pl-8 reveal">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-premiumGold border-4 border-premiumWhite"></div>
-                <div class="bg-white border border-premiumGrayLight rounded-2xl p-6 shadow-sm hover:shadow-md transition-all">
-                    <span class="text-xs font-semibold text-premiumGrayText">Tecnologia Corporativa</span>
-                    <h4 class="text-lg font-bold text-premiumBlack">Venko</h4>
-                    <p class="text-sm text-premiumGold font-medium mb-2">Copywriting • Conteúdo</p>
-                </div>
-            </div>
-
-            <div class="relative pl-8 reveal">
-                <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-premiumBlack border-4 border-premiumWhite animate-pulse"></div>
-                <div class="bg-premiumBlack border border-premiumBlack rounded-2xl p-6 shadow-md text-white">
-                    <span class="text-xs font-semibold text-premiumGold uppercase tracking-wider">Momento Atual</span>
-                    <h4 class="text-lg font-bold text-premiumWhite">Hoje</h4>
-                    <p class="text-sm text-premiumWhite/80 font-medium">Especialista em Marketing Estratégico</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Cases de Sucesso -->
-    <section id="cases" class="py-24 bg-white border-t border-premiumGrayLight">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-32">
-            
-            <div class="text-center max-w-xl mx-auto space-y-4 reveal">
-                <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Portfólio Executivo</span>
-                <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-premiumBlack">Cases em Destaque</h3>
-            </div>
-
-            <!-- Case 1: Rotoline -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center reveal">
-                <div class="bg-premiumWhite aspect-video rounded-3xl border border-premiumGrayLight overflow-hidden shadow-sm">
-                    <img src="assets/imagens/rotoline.webp" alt="Case Rotoline" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-6">
-                    <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Segmento Técnico</span>
-                    <h4 class="text-3xl font-bold text-premiumBlack tracking-tight">
-                        <a href="https://www.rotoline.com/br/" target="_blank" rel="noopener noreferrer" class="hover:text-premiumGold transition-colors">Rotoline</a>
-                    </h4>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Desafio</h5>
-                        <p class="text-premiumGrayText text-sm">Explicar temas altamente técnicos de engenharia e transformação de plásticos para tomadores de decisão.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Atuação</h5>
-                        <p class="text-premiumGrayText text-sm">Estratégias avançadas de SEO, Pesquisa de Mercado profunda, Production de artigos de alta complexidade e Gestão do Marketing de Conteúdo.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Resultado</h5>
-                        <p class="text-premiumGrayText text-sm font-medium text-premiumBlack">Construção sólida de autoridade digital orgânica através do blog corporativo.</p>
-                    </div>
-                    <a href="https://www.rotoline.com/br/blog/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-premiumGold hover:text-premiumBlack transition-colors duration-200 pt-2">
-                        Ver artigos <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Case 2: Life Agro -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center reveal">
-                <div class="bg-premiumWhite aspect-video rounded-3xl border border-premiumGrayLight overflow-hidden shadow-sm lg:order-last">
-                    <img src="assets/imagens/lifeagro.webp" alt="Case Life Agro" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-6">
-                    <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Agronegócio</span>
-                    <h4 class="text-3xl font-bold text-premiumBlack tracking-tight">
-                        <a href="https://lifeagro.com.br/" target="_blank" rel="noopener noreferrer" class="hover:text-premiumGold transition-colors">Life Agro</a>
-                    </h4>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Desafio</h5>
-                        <p class="text-premiumGrayText text-sm">Posicionar soluções científicas agrícolas complexas de forma compreensível e mercadologicamente atraente.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Atuação</h5>
-                        <p class="text-premiumGrayText text-sm">Desenvolvimento de narrativas focadas na dor do produtor, coordenação de comunicação integrada e curadoria institucional.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Resultado</h5>
-                        <p class="text-premiumGrayText text-sm font-medium text-premiumBlack">Alinhamento preciso de marca gerando identificação direta com o público final e força de vendas.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case 3: Redesul -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center reveal">
-                <div class="bg-premiumWhite aspect-video rounded-3xl border border-premiumGrayLight overflow-hidden shadow-sm">
-                    <img src="assets/imagens/redesul.webp" alt="Case Redesul" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-6">
-                    <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Finanças e Crédito</span>
-                    <h4 class="text-3xl font-bold text-premiumBlack tracking-tight">
-                        <a href="https://redesulconsorcios.com.br/" target="_blank" rel="noopener noreferrer" class="hover:text-premiumGold transition-colors">Redesul</a>
-                    </h4>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Desafio</h5>
-                        <p class="text-premiumGrayText text-sm">Geração de Leads qualificados em um mercado altamente competitivo de consórcios e investimentos imobiliários. Visite o <a href="https://blog.redesulconsorcios.com.br/" target="_blank" rel="noopener noreferrer" class="underline text-premiumBlack font-medium hover:text-premiumGold">Blog Corporativo</a>.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Artigos de Performance Desenvolvidos:</h5>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-medium text-premiumGrayText">
-                            <li>
-                                <a href="https://blog.redesulconsorcios.com.br/como-comprar-imovel-sem-entrada/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="file-text" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Como comprar imóvel sem entrada
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://blog.redesulconsorcios.com.br/repasse-de-consorcio-contemplado-saiba-como-funciona/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="file-text" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Repasse de consórcio contemplado
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://blog.redesulconsorcios.com.br/consorcio-em-sao-paulo-opcao-para-jovens-comprarem-imovel/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="file-text" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Consórcio em São Paulo
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://blog.redesulconsorcios.com.br/lance-embutido-no-consorcio-entenda-como-funciona/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="file-text" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Lance embutido
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case 4: Venko -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center reveal">
-                <div class="bg-premiumWhite aspect-video rounded-3xl border border-premiumGrayLight overflow-hidden shadow-sm lg:order-last">
-                    <img src="assets/imagens/venko.webp" alt="Case Venko" class="w-full h-full object-cover">
-                </div>
-                <div class="space-y-6">
-                    <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">B2B Strategy</span>
-                    <h4 class="text-3xl font-bold text-premiumBlack tracking-tight">
-                        <a href="https://venkocredit.com.br/" target="_blank" rel="noopener noreferrer" class="hover:text-premiumGold transition-colors">Venko</a>
-                    </h4>
-                    <div class="space-y-2">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Desafio</h5>
-                        <p class="text-premiumGrayText text-sm">Construir autoridade editorial acerca de saúde e reestruturação financeira para médias e grandes corporações.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h5 class="text-xs uppercase font-bold tracking-wider text-premiumBlack">Pilares de Conteúdo Criados:</h5>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-medium text-premiumGrayText">
-                            <li>
-                                <a href="https://venkocredit.com.br/capital-de-giro-para-empresa/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Capital de giro
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://venkocredit.com.br/recuperar-empresas/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Recuperar empresas
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://venkocredit.com.br/fluxo-de-caixa/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Fluxo de caixa
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://venkocredit.com.br/como-organizar-financas-guia-pratico/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Organizar finanças
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://venkocredit.com.br/linhas-de-credito-empresarial-compare-antes-de-decidir/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-premiumGold transition-colors">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-premiumGold shrink-0"></i> Linhas de crédito
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Biblioteca de Artigos -->
-    <section id="artigos" class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-16 reveal">
-            <div class="space-y-4">
-                <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Content Library</span>
-                <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-premiumBlack">Biblioteca de Artigos</h3>
-            </div>
-            <p class="text-premiumGrayText text-sm max-w-md">Uma amostra da aplicação prática das diretrizes de SEO e retenção de leitura em ambiente corporativo.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
-            
-            <!-- Card 1: Rotoline Destaque -->
-            <div class="bg-white border border-premiumGrayLight rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                <div class="p-6 space-y-4">
-                    <span class="text-[10px] font-bold tracking-widest uppercase bg-premiumWhite border px-2.5 py-1 rounded-full text-premiumGrayText">Rotoline • Destaque</span>
-                    <h4 class="text-lg font-bold text-premiumBlack leading-tight group-hover:text-premiumGold transition-colors">Rotomoldagem de plástico: guia prático definitivo</h4>
-                    <p class="text-xs text-premiumGrayText line-clamp-3">Abordagem mercadológica e operacional rica, otimizada para buscadores visando posicionamento industrial de alta conversão.</p>
-                </div>
-                <div class="p-6 border-t border-premiumGrayLight">
-                    <a href="https://www.rotoline.com/br/blog/rotomoldagem-de-plastico-guia-pratico/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-premiumBlack flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Ler Artigo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 2: Redesul 1 -->
-            <div class="bg-white border border-premiumGrayLight rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                <div class="p-6 space-y-4">
-                    <span class="text-[10px] font-bold tracking-widest uppercase bg-premiumWhite border px-2.5 py-1 rounded-full text-premiumGrayText">Redesul</span>
-                    <h4 class="text-lg font-bold text-premiumBlack leading-tight group-hover:text-premiumGold transition-colors">Como comprar imóvel sem entrada de forma segura</h4>
-                    <p class="text-xs text-premiumGrayText line-clamp-3">Análise estratégica de alternativas financeiras reais para aquisição imobiliária de alto padrão.</p>
-                </div>
-                <div class="p-6 border-t border-premiumGrayLight">
-                    <a href="https://blog.redesulconsorcios.com.br/como-comprar-imovel-sem-entrada/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-premiumBlack flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Ler Artigo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 3: Redesul 2 -->
-            <div class="bg-white border border-premiumGrayLight rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                <div class="p-6 space-y-4">
-                    <span class="text-[10px] font-bold tracking-widest uppercase bg-premiumWhite border px-2.5 py-1 rounded-full text-premiumGrayText">Redesul</span>
-                    <h4 class="text-lg font-bold text-premiumBlack leading-tight group-hover:text-premiumGold transition-colors">Repasse de consórcio contemplado: Guia Completo</h4>
-                    <p class="text-xs text-premiumGrayText line-clamp-3">Desmistificando a burocracia e apontando as melhores oportunidades de investimento em ativos.</p>
-                </div>
-                <div class="p-6 border-t border-premiumGrayLight">
-                    <a href="https://blog.redesulconsorcios.com.br/repasse-de-consorcio-contemplado-saiba-como-funciona/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-premiumBlack flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Ler Artigo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 4: Venko 1 -->
-            <div class="bg-white border border-premiumGrayLight rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                <div class="p-6 space-y-4">
-                    <span class="text-[10px] font-bold tracking-widest uppercase bg-premiumWhite border px-2.5 py-1 rounded-full text-premiumGrayText">Venko</span>
-                    <h4 class="text-lg font-bold text-premiumBlack leading-tight group-hover:text-premiumGold transition-colors">Capital de giro: Como otimizar a estrutura de capital</h4>
-                    <p class="text-xs text-premiumGrayText line-clamp-3">Artigo analítico para diretores financeiros com soluções de sustentabilidade e tração operacional.</p>
-                </div>
-                <div class="p-6 border-t border-premiumGrayLight">
-                    <a href="https://venkocredit.com.br/capital-de-giro-para-empresa/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-premiumBlack flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Ler Artigo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 5: Venko 2 -->
-            <div class="bg-white border border-premiumGrayLight rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                <div class="p-6 space-y-4">
-                    <span class="text-[10px] font-bold tracking-widest uppercase bg-premiumWhite border px-2.5 py-1 rounded-full text-premiumGrayText">Venko</span>
-                    <h4 class="text-lg font-bold text-premiumBlack leading-tight group-hover:text-premiumGold transition-colors">Recuperar empresas: Gestão de crises e Turnaround</h4>
-                    <p class="text-xs text-premiumGrayText line-clamp-3">Estudo de posicionamento voltado a metodologias eficientes de governança e reestruturação corporativa.</p>
-                </div>
-                <div class="p-6 border-t border-premiumGrayLight">
-                    <a href="https://venkocredit.com.br/recuperar-empresas/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-premiumBlack flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Ler Artigo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 6: Venko 3 -->
-            <div class="bg-white border border-premiumGrayLight rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
-                <div class="p-6 space-y-4">
-                    <span class="text-[10px] font-bold tracking-widest uppercase bg-premiumWhite border px-2.5 py-1 rounded-full text-premiumGrayText">Venko</span>
-                    <h4 class="text-lg font-bold text-premiumBlack leading-tight group-hover:text-premiumGold transition-colors">Fluxo de caixa e linhas de crédito estratégicas</h4>
-                    <p class="text-xs text-premiumGrayText line-clamp-3">Organização financeira com foco em captação inteligente sem comprometer o equity da organização.</p>
-                </div>
-                <div class="p-6 border-t border-premiumGrayLight">
-                    <a href="https://venkocredit.com.br/fluxo-de-caixa/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-premiumBlack flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Ler Artigo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Formação Acadêmica -->
-    <section id="formacao" class="py-24 bg-white border-y border-premiumGrayLight">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="text-center space-y-4 mb-16 reveal">
-                <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Background Executivo</span>
-                <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-premiumBlack">Formação</h3>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
-                
-                <div class="bg-premiumWhite border border-premiumGrayLight p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-premiumGold border border-premiumGrayLight">
-                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-premiumBlack">Jornalismo</h4>
-                        <p class="text-xs text-premiumGrayText">Unochapecó</p>
-                        <p class="text-xs text-premiumGold mt-2 font-medium">2015 – 2018</p>
-                    </div>
-                </div>
-
-                <div class="bg-premiumWhite border border-premiumGrayLight p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-premiumGold border border-premiumGrayLight">
-                        <i data-lucide="award" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-premiumBlack">Pós-Graduação</h4>
-                        <p class="text-xs text-premiumGrayText">Comunicação Empresarial</p>
-                        <p class="text-xs text-premiumGold mt-2 font-medium">Especialização</p>
-                    </div>
-                </div>
-
-                <div class="bg-premiumWhite border border-premiumGrayLight p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-premiumGold border border-premiumGrayLight">
-                        <i data-lucide="award" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-premiumBlack">MBA</h4>
-                        <p class="text-xs text-premiumGrayText">Gestão de Processos</p>
-                        <p class="text-xs text-premiumGold mt-2 font-medium">Executivo</p>
-                    </div>
-                </div>
-
-                <div class="bg-premiumWhite border border-premiumGrayLight p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-premiumGold border border-premiumGrayLight">
-                        <i data-lucide="award" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-premiumBlack">Pós-Graduação</h4>
-                        <p class="text-xs text-premiumGrayText">Docência no Ensino Superior</p>
-                        <p class="text-xs text-premiumGold mt-2 font-medium">Acadêmico</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Competências -->
-    <section class="py-24 max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="text-center space-y-4 mb-16 reveal">
-            <span class="text-xs font-bold tracking-widest text-premiumGold uppercase">Ecosystem</span>
-            <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-premiumBlack">Competências & Ferramentas</h3>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 reveal">
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="search" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">SEO</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="pen-tool" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">Copywriting</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="layers" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">Content Marketing</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="globe" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">WordPress</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="bar-chart-3" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">Google Analytics</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="palette" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">Canva</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="image" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">Photoshop</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="video" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">Premiere</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="cpu" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">IA aplicada</span>
-            </div>
-            <div class="p-6 bg-white border border-premiumGrayLight rounded-xl flex items-center gap-3 hover:border-premiumBlack transition-colors duration-200">
-                <i data-lucide="users" class="w-5 h-5 text-premiumGold"></i> <span class="text-sm font-semibold text-premiumBlack">Comunicação</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contato" class="bg-premiumBlack text-white py-32 px-6 text-center relative overflow-hidden">
-        <div class="max-w-3xl mx-auto space-y-8 relative z-10 reveal">
-            <h3 class="text-4xl lg:text-6xl font-bold tracking-tight text-premiumWhite">
-                Vamos transformar informação em estratégia?
-            </h3>
-            <p class="text-premiumGrayLight/70 max-w-lg mx-auto text-sm lg:text-base">
-                Disponível para projetos corporativos consultivos, estruturação de canais editoriais de alta performance e parcerias de marca.
+    <!-- RESUMO -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p class="about-text">
+                Jornalista e pós-graduada em Comunicação Empresarial, com mais de 5 anos de sólida experiência no ecossistema de marketing, redação corporativa e estratégias de SEO. Especialista no desenvolvimento de narrativas humanizadas e institucionais que traduzem a essência de marcas e geram conexão legítima com o público.
             </p>
-            
-            <!-- Botões de Contato Premium Atualizados -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a href="https://wa.me/5549988853206" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-premiumGold text-white rounded-full font-bold text-sm tracking-wide uppercase shadow-lg shadow-[#C9A227]/20 hover:bg-[#b08e20] transition-all duration-300 w-full sm:w-auto">
-                    <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp
-                </a>
-                <a href="mailto:kelinreginaw@gmail.com" class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-transparent text-white border border-white/20 rounded-full font-bold text-sm tracking-wide uppercase hover:bg-white/10 transition-all duration-300 w-full sm:w-auto">
-                    <i data-lucide="mail" class="w-4 h-4"></i> E-mail
-                </a>
-            </div>
+            <p class="about-text">
+                Com atuação expressiva na produção de artigos técnicos, gerenciamento de mídias sociais corporativas, redação para agronegócio, soluções de automação e CRM, unindo rigor analítico à fluidez jornalística.
+            </p>
         </div>
-        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-premiumGold/5 rounded-full blur-3xl"></div>
     </section>
 
-    <!-- Rodapé Minimalista -->
-    <footer class="py-12 bg-premiumWhite border-t border-premiumGrayLight text-xs text-premiumGrayText">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div class="space-y-1 text-center sm:text-left">
-                <p class="font-bold text-premiumBlack text-sm">Kelin Regina</p>
-                <p>Jornalista & Especialista em Marketing Digital</p>
-            </div>
-            
-            <!-- Links do Rodapé Atualizados -->
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-6 font-medium">
-                <a href="https://www.linkedin.com/in/kelin-regina-w/" target="_blank" rel="noopener noreferrer" class="hover:text-premiumBlack transition-colors flex items-center gap-1">
-                    <i data-lucide="linkedin" class="w-3.5 h-3.5"></i> LinkedIn
-                </a>
-                <a href="https://wa.me/5549988853206" target="_blank" rel="noopener noreferrer" class="hover:text-premiumBlack transition-colors flex items-center gap-1">
-                    <i data-lucide="message-square" class="w-3.5 h-3.5"></i> WhatsApp
-                </a>
-                <a href="mailto:kelinreginaw@gmail.com" class="hover:text-premiumBlack transition-colors flex items-center gap-1">
-                    <i data-lucide="mail" class="w-3.5 h-3.5"></i> E-mail
-                </a>
-                <a href="https://github.com/kelinregina-wirth" target="_blank" rel="noopener noreferrer" class="hover:text-premiumBlack transition-colors flex items-center gap-1">
-                    <i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub
-                </a>
-            </div>
+    <!-- PORTFÓLIO DE ARTIGOS -->
+    <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <h2 class="section-title">Artigos & Produção de Conteúdo</h2>
+            <div class="portfolio-grid">
 
-            <p class="text-center sm:text-right">&copy; 2026 Kelin Regina. Todos os direitos reservados.</p>
+                <!-- CARD 1: ROTOLINE TERCEIRIZAR -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Indústria Industrial" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Produção de peças rotomoldadas: vale mais terceirizar ou internalizar?</h3>
+                        <a href="https://www.rotoline.com/br/blog/producao-de-pecas-rotomoldadas-vale-mais-terceirizar-ou-internalizar/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 2: ROTOLINE GUIA -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Indústria Industrial" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Rotomoldagem de plástico: guia prático</h3>
+                        <a href="https://www.rotoline.com/br/blog/rotomoldagem-de-plastico-guia-pratico/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 3: ROTOLINE PRODUTIVIDADE -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Indústria Industrial" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Como aumentar a produtividade na rotomoldagem</h3>
+                        <a href="https://www.rotoline.com/br/blog/como-aumentar-a-produtividade-na-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 4: REDESUL CONSÓRCIOS -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop" alt="Mercado Imobiliário" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Redesul Consórcios</span>
+                        <h3 class="card-title">Como comprar imóvel sem entrada: o papel estratégico do consórcio</h3>
+                        <a href="https://blog.redesulconsorcios.com.br/" target="_blank" class="card-link">Acessar Blog →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 5: VENKO TECH -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Tecnologia e Marketing" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Venko</span>
+                        <h3 class="card-title">Estratégias de Posicionamento e Performance Digital</h3>
+                        <a href="#" target="_blank" class="card-link">Ver Conteúdo →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 6: ROTOLINE MAQUINAS -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Maquinário Industrial" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Qual é a melhor máquina de rotomoldagem para você?</h3>
+                        <a href="https://www.rotoline.com/br/blog/qual-e-a-melhor-maquina-de-rotomoldagem-para-voce/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 7: ROTOLINE TENDENCIAS -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Inovação Industrial" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Tendências e inovações para o mercado de rotomoldagem</h3>
+                        <a href="https://www.rotoline.com/br/blog/tendencias-e-inovacoes-para-o-mercado-de-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 8: ROTOLINE MANUTENCAO -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Manutenção Industrial" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Como realizar manutenção preventiva em máquinas de rotomoldagem</h3>
+                        <a href="https://www.rotoline.com/br/blog/como-realizar-manutencao-preventiva-em-maquinas-de-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 9: ROTOLINE CARROSSEL -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Performance Industrial" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Maximize resultados com a máquina Carrossel</h3>
+                        <a href="https://www.rotoline.com/br/blog/maximize-resultados-com-a-maquina-carrossel/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 10: ROTOLINE RESINAS -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Matéria Prima" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Melhores resinas para matéria-prima da rotomoldagem</h3>
+                        <a href="https://www.rotoline.com/br/blog/melhores-resinas-para-materia-prima-da-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 11: ROTOLINE INDÚSTRIA -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Setores da Técnica" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Rotomoldagem na indústria: principais setores que utilizam a técnica</h3>
+                        <a href="https://www.rotoline.com/br/blog/rotomoldagem-na-industria-principais-setores-que-utilizam-a-tecnica/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+                <!-- CARD 12: ROTOLINE TANQUES -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Tanques e Revolução" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="company-label">Rotoline</span>
+                        <h3 class="card-title">Tanques de armazenamento rotomoldados: revolução na indústria</h3>
+                        <a href="https://www.rotoline.com/br/blog/tanques-de-armazenamento-rotomoldados-revolucao-na-industria/" target="_blank" class="card-link">Ler Publicação →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Trajetória Profissional</h2>
+            <div class="experience-timeline">
+
+                <div class="exp-item">
+                    <div class="exp-company">Redesul Consórcios</div>
+                    <div class="exp-role">Analista de Mídias Sociais</div>
+                    <div class="exp-meta">Julho de 2025 – Presente | Chapecó, SC</div>
+                    <p class="exp-desc">Planejamento e mapeamento estratégico de conteúdo multiplataforma para as marcas do grupo. Criação de roteiros audiovisuais institucionais e YouTube, além da aplicação avançada de copywriting e SEO para engajamento digital.</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-company">Frigorífico Ecofrigo</div>
+                    <div class="exp-role">Assistente de Comunicação</div>
+                    <div class="exp-meta">Janeiro de 2025 – Maio de 2025 | Chapecó, SC</div>
+                    <p class="exp-desc">Desenvolvimento de campanhas e narrativas corporativas voltadas à Comunicação Interna e alinhamento de cultura organizacional.</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-company">Life Agro</div>
+                    <div class="exp-role">Analista de Marketing</div>
+                    <div class="exp-meta">Agosto de 2024 – Dezembro de 2024 | Chapecó, SC</div>
+                    <p class="exp-desc">Coordenação de ações de endomarketing, suporte em estratégias digitais de produto e geração de conteúdo para o agronegócio.</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-company">Santa Comunicação & Revista Setor Agro&Negócios</div>
+                    <div class="exp-role">Produtora de Conteúdo Editorial</div>
+                    <div class="exp-meta">Agosto de 2017 – Julho de 2018 | Chapecó, SC</div>
+                    <p class="exp-desc">Entrevistas e redação de reportagens jornalísticas completas para meios impressos e digitais focados em agronegócio, saúde e mercado corporativo.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p class="meta-text">Kelin Regina Wirth</p>
+            <p>Portfólio Editorial & Comunicação Estratégica — Chapecó, SC</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        lucide.createIcons();
-
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.remove('bg-transparent', 'py-6');
-                header.classList.add('bg-white/90', 'backdrop-blur-md', 'py-4', 'shadow-sm', 'border-b', 'border-[#ECECEC]');
-            } else {
-                header.classList.remove('bg-white/90', 'backdrop-blur-md', 'py-4', 'shadow-sm', 'border-b', 'border-[#ECECEC]');
-                header.classList.add('bg-transparent', 'py-6');
-            }
-        });
-
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        const toggleMenu = () => {
-            mobileMenu.classList.toggle('hidden');
-            if(!mobileMenu.classList.contains('hidden')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
-        };
-
-        menuBtn.addEventListener('click', toggleMenu);
-        closeBtn.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        const counters = document.querySelectorAll('.counter');
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                let count = 0;
-                const speed = 40;
-                const increment = target / speed;
-
-                const updateCount = () => {
-                    count += increment;
-                    if (count < target) {
-                        counter.innerText = `+${Math.ceil(count)}`;
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = `+${target}`;
-                    }
-                };
-                updateCount();
-            });
-        };
-
-        const statsSection = document.getElementById('sobre');
-        const statsObserver = new IntersectionObserver((entries, observer) => {
-            if(entries[0].isIntersecting) {
-                animateCounters();
-                observer.unobserve(entries[0].target);
-            }
-        }, { threshold: 0.2 });
-        statsObserver.observe(statsSection);
-    </script>
 </body>
 </html>
