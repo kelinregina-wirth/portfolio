@@ -4,558 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Kelin Regina Wirth</title>
-    <style>
-        /* Paleta Editorial Premium: Minimalista, Tons Terrosos, Ouro Velho e Grafite */
-        :root {
-            --bg-primary: #fcfbfa;
-            --bg-secondary: #f4f1ec;
-            --text-main: #1c1c1c;
-            --text-muted: #5e5e5e;
-            --accent-gold: #b39258;
-            --accent-gold-hover: #967843;
-            --border-color: #e3ded5;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Georgia', serif;
-            font-weight: 400;
-            letter-spacing: -0.02em;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        /* Container global */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Seção Hero / Perfil */
-        .hero {
-            padding: 80px 0 60px 0;
-            border-bottom: 1px solid var(--border-color);
-            background-image: linear-gradient(to bottom, #fcfbfa, #f4f1ec);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            text-align: center;
-            justify-items: center;
-            gap: 32px;
-        }
-
-        @media (min-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 200px 1fr;
-                text-align: left;
-                justify-items: start;
-                align-items: center;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premiumGold: '#b39258',
+                        premiumBlack: '#1c1c1c',
+                        premiumGrayLight: '#e3ded5',
+                        premiumGrayText: '#5e5e5e',
+                        bgPrimary: '#fcfbfa',
+                        bgSecondary: '#f4f1ec',
+                    }
+                }
             }
         }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--border-color);
-            background-color: #eee;
-        }
-
-        .hero-details h1 {
-            font-size: 2.5rem;
-            margin-bottom: 8px;
-            color: var(--text-main);
-        }
-
-        .hero-details .subtitle {
-            font-size: 1.15rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .hero-details .location {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Ações e Links Corporativos (Sem ícones) */
-        .actions-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--text-main);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-gold);
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--text-main);
-            color: var(--text-main);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-        }
-
-        /* Seções de Conteúdo */
-        .section-padding {
-            padding: 60px 0;
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            margin-bottom: 40px;
-            position: relative;
-            padding-bottom: 12px;
-            text-transform: capitalize;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent-gold);
-        }
-
-        /* Resumo Profissional */
-        .about-text {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 800px;
-            margin-bottom: 24px;
-        }
-
-        /* Grid do Portfólio de Artigos */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 32px;
-        }
-
-        @media (min-width: 640px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .card {
-            background-color: #fff;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
-        }
-
-        .card-img-wrapper {
-            position: relative;
-            width: 100%;
-            height: 180px;
-            background-color: var(--bg-secondary);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card-body {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        /* Label Corporativo Puro Texto */
-        .company-label {
-            font-size: 0.75rem;
-            font-weight: 800;
-            letter-spacing: 0.15em;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .card-title {
-            font-size: 1.15rem;
-            margin-bottom: 16px;
-            color: var(--text-main);
-            line-height: 1.4;
-            flex-grow: 1;
-        }
-
-        .card-link {
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-main);
-            display: inline-block;
-            margin-top: auto;
-            padding-top: 12px;
-            border-top: 1px solid var(--bg-secondary);
-        }
-
-        .card-link:hover {
-            color: var(--accent-gold);
-        }
-
-        /* Lista de Experiências Profissionais Textual */
-        .experience-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .exp-item {
-            border-left: 2px solid var(--accent-gold);
-            padding-left: 24px;
-        }
-
-        .exp-company {
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--text-main);
-        }
-
-        .exp-role {
-            font-style: italic;
-            color: var(--accent-gold);
-            margin: 4px 0 8px 0;
-            font-size: 1rem;
-        }
-
-        .exp-meta {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 12px;
-        }
-
-        .exp-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            max-width: 900px;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        footer .meta-text {
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-bgPrimary text-premiumBlack antialiased">
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <img src="ChatGPT Image 11 de jun. de 2026, 19_03_43.png" alt="Kelin Regina Wirth" class="profile-img">
-                <div class="hero-details">
-                    <h1>Kelin Regina Wirth</h1>
-                    <div class="subtitle">Jornalista | Comunicação Empresarial | Marketing</div>
-                    <div class="location">Chapecó, Santa Catarina, Brasil</div>
+    <header class="border-b border-premiumGrayLight bg-gradient-to-b from-bgPrimary to-bgSecondary py-16">
+        <div class="max-width-1100mx mx-auto max-w-6xl px-6">
+            <div class="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-start">
+                <img src="ChatGPT Image 11 de jun. de 2026, 19_03_43.png" alt="Kelin Regina Wirth" class="h-44 w-44 rounded-full border-2 border-premiumGrayLight object-cover bg-white">
+                
+                <div class="text-center md:text-left">
+                    <h1 class="font-serif text-4xl font-normal tracking-tight text-premiumBlack mb-2">Kelin Regina Wirth</h1>
+                    <p class="text-xs font-bold uppercase tracking-widest text-premiumGold mb-2">Jornalista | Comunicação Empresarial | Marketing</p>
+                    <p class="text-sm font-medium tracking-wide text-premiumGrayText uppercase mb-6">Chapecó, Santa Catarina, Brasil</p>
                     
-                    <div class="actions-wrapper">
-                        <a href="Kelin_Regina_Wirth_2026.pdf" target="_blank" class="btn btn-primary">Currículo (PDF)</a>
-                        <a href="https://www.linkedin.com/in/kelin-regina-w" target="_blank" class="btn btn-secondary">LinkedIn</a>
-                        <a href="mailto:kelinreginaw@gmail.com" class="btn btn-secondary">Contato Direto</a>
+                    <div class="flex flex-wrap justify-center gap-3 md:justify-start">
+                        <a href="Kelin_Regina_Wirth_2026.pdf" target="_blank" class="bg-premiumBlack text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-premiumGold transition-colors">
+                            Visualizar Currículo (PDF)
+                        </a>
+                        <a href="https://www.linkedin.com/in/kelin-regina-w" target="_blank" class="border border-premiumBlack text-premiumBlack text-xs font-bold uppercase tracking-widest px-6 py-3 rounded hover:border-premiumGold hover:text-premiumGold transition-colors">
+                            LinkedIn
+                        </a>
+                        <a href="mailto:kelinreginaw@gmail.com" class="border border-premiumBlack text-premiumBlack text-xs font-bold uppercase tracking-widest px-6 py-3 rounded hover:border-premiumGold hover:text-premiumGold transition-colors">
+                            Contato
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- RESUMO -->
-    <section class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <p class="about-text">
-                Jornalista e pós-graduada em Comunicação Empresarial, com mais de 5 anos de sólida experiência no ecossistema de marketing, redação corporativa e estratégias de SEO. Especialista no desenvolvimento de narrativas humanizadas e institucionais que traduzem a essência de marcas e geram conexão legítima com o público.
-            </p>
-            <p class="about-text">
-                Com atuação expressiva na produção de artigos técnicos, gerenciamento de mídias sociais corporativas, redação para agronegócio, soluções de automação e CRM, unindo rigor analítico à fluidez jornalística.
-            </p>
-        </div>
-    </section>
+    <main class="py-16 max-w-6xl mx-auto px-6">
+        <h2 class="font-serif text-2xl font-normal mb-12 relative pb-3 border-b-2 border-premiumGold inline-block">Artigos Publicados</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <!-- PORTFÓLIO DE ARTIGOS -->
-    <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-        <div class="container">
-            <h2 class="section-title">Artigos & Produção de Conteúdo</h2>
-            <div class="portfolio-grid">
-
-                <!-- CARD 1: ROTOLINE TERCEIRIZAR -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Indústria Industrial" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Produção de peças rotomoldadas: vale mais terceirizar ou internalizar?</h3>
-                        <a href="https://www.rotoline.com/br/blog/producao-de-pecas-rotomoldadas-vale-mais-terceirizar-ou-internalizar/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
+            <div class="bg-white border border-premiumGrayLight rounded-xl overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                <div class="h-44 w-full bg-bgSecondary">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Capa" class="h-full w-full object-cover">
                 </div>
-
-                <!-- CARD 2: ROTOLINE GUIA -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Indústria Industrial" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Rotomoldagem de plástico: guia prático</h3>
-                        <a href="https://www.rotoline.com/br/blog/rotomoldagem-de-plastico-guia-pratico/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-[10px] font-black tracking-widest text-premiumGold uppercase mb-3">Rotoline (2021)</span>
+                    <h3 class="font-serif text-lg font-normal leading-snug mb-4 flex-grow text-premiumBlack">Produção de peças rotomoldadas: vale mais terceirizar ou internalizar?</h3>
+                    <a href="https://www.rotoline.com/br/blog/producao-de-pecas-rotomoldadas-vale-mais-terceirizar-ou-internalizar/" target="_blank" class="text-xs font-bold uppercase tracking-wider text-premiumBlack pt-3 border-t border-bgSecondary hover:text-premiumGold mt-auto">Ler Artigo completo →</a>
                 </div>
-
-                <!-- CARD 3: ROTOLINE PRODUTIVIDADE -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Indústria Industrial" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Como aumentar a produtividade na rotomoldagem</h3>
-                        <a href="https://www.rotoline.com/br/blog/como-aumentar-a-produtividade-na-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 4: REDESUL CONSÓRCIOS -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop" alt="Mercado Imobiliário" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Redesul Consórcios</span>
-                        <h3 class="card-title">Como comprar imóvel sem entrada: o papel estratégico do consórcio</h3>
-                        <a href="https://blog.redesulconsorcios.com.br/" target="_blank" class="card-link">Acessar Blog →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 5: VENKO TECH -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Tecnologia e Marketing" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Venko</span>
-                        <h3 class="card-title">Estratégias de Posicionamento e Performance Digital</h3>
-                        <a href="#" target="_blank" class="card-link">Ver Conteúdo →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 6: ROTOLINE MAQUINAS -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Maquinário Industrial" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Qual é a melhor máquina de rotomoldagem para você?</h3>
-                        <a href="https://www.rotoline.com/br/blog/qual-e-a-melhor-maquina-de-rotomoldagem-para-voce/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 7: ROTOLINE TENDENCIAS -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Inovação Industrial" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Tendências e inovações para o mercado de rotomoldagem</h3>
-                        <a href="https://www.rotoline.com/br/blog/tendencias-e-inovacoes-para-o-mercado-de-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 8: ROTOLINE MANUTENCAO -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Manutenção Industrial" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Como realizar manutenção preventiva em máquinas de rotomoldagem</h3>
-                        <a href="https://www.rotoline.com/br/blog/como-realizar-manutencao-preventiva-em-maquinas-de-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 9: ROTOLINE CARROSSEL -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Performance Industrial" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Maximize resultados com a máquina Carrossel</h3>
-                        <a href="https://www.rotoline.com/br/blog/maximize-resultados-com-a-maquina-carrossel/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 10: ROTOLINE RESINAS -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Matéria Prima" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Melhores resinas para matéria-prima da rotomoldagem</h3>
-                        <a href="https://www.rotoline.com/br/blog/melhores-resinas-para-materia-prima-da-rotomoldagem/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 11: ROTOLINE INDÚSTRIA -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Setores da Técnica" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Rotomoldagem na indústria: principais setores que utilizam a técnica</h3>
-                        <a href="https://www.rotoline.com/br/blog/rotomoldagem-na-industria-principais-setores-que-utilizam-a-tecnica/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
-                <!-- CARD 12: ROTOLINE TANQUES -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Tanques e Revolução" class="card-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="company-label">Rotoline</span>
-                        <h3 class="card-title">Tanques de armazenamento rotomoldados: revolução na indústria</h3>
-                        <a href="https://www.rotoline.com/br/blog/tanques-de-armazenamento-rotomoldados-revolucao-na-industria/" target="_blank" class="card-link">Ler Publicação →</a>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
 
-    <!-- EXPERIÊNCIA PROFISSIONAL -->
-    <section class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Trajetória Profissional</h2>
-            <div class="experience-timeline">
-
-                <div class="exp-item">
-                    <div class="exp-company">Redesul Consórcios</div>
-                    <div class="exp-role">Analista de Mídias Sociais</div>
-                    <div class="exp-meta">Julho de 2025 – Presente | Chapecó, SC</div>
-                    <p class="exp-desc">Planejamento e mapeamento estratégico de conteúdo multiplataforma para as marcas do grupo. Criação de roteiros audiovisuais institucionais e YouTube, além da aplicação avançada de copywriting e SEO para engajamento digital.</p>
+            <div class="bg-white border border-premiumGrayLight rounded-xl overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                <div class="h-44 w-full bg-bgSecondary">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=600&auto=format&fit=crop" alt="Capa" class="h-full w-full object-cover">
                 </div>
-
-                <div class="exp-item">
-                    <div class="exp-company">Frigorífico Ecofrigo</div>
-                    <div class="exp-role">Assistente de Comunicação</div>
-                    <div class="exp-meta">Janeiro de 2025 – Maio de 2025 | Chapecó, SC</div>
-                    <p class="exp-desc">Desenvolvimento de campanhas e narrativas corporativas voltadas à Comunicação Interna e alinhamento de cultura organizacional.</p>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-[10px] font-black tracking-widest text-premiumGold uppercase mb-3">Rotoline</span>
+                    <h3 class="font-serif text-lg font-normal leading-snug mb-4 flex-grow text-premiumBlack">Rotomoldagem de plástico: guia prático</h3>
+                    <a href="https://www.rotoline.com/br/blog/rotomoldagem-de-plastico-guia-pratico/" target="_blank" class="text-xs font-bold uppercase tracking-wider text-premiumBlack pt-3 border-t border-bgSecondary hover:text-premiumGold mt-auto">Ler Artigo completo →</a>
                 </div>
-
-                <div class="exp-item">
-                    <div class="exp-company">Life Agro</div>
-                    <div class="exp-role">Analista de Marketing</div>
-                    <div class="exp-meta">Agosto de 2024 – Dezembro de 2024 | Chapecó, SC</div>
-                    <p class="exp-desc">Coordenação de ações de endomarketing, suporte em estratégias digitais de produto e geração de conteúdo para o agronegócio.</p>
-                </div>
-
-                <div class="exp-item">
-                    <div class="exp-company">Santa Comunicação & Revista Setor Agro&Negócios</div>
-                    <div class="exp-role">Produtora de Conteúdo Editorial</div>
-                    <div class="exp-meta">Agosto de 2017 – Julho de 2018 | Chapecó, SC</div>
-                    <p class="exp-desc">Entrevistas e redação de reportagens jornalísticas completas para meios impressos e digitais focados em agronegócio, saúde e mercado corporativo.</p>
-                </div>
-
             </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p class="meta-text">Kelin Regina Wirth</p>
-            <p>Portfólio Editorial & Comunicação Estratégica — Chapecó, SC</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <div class="bg-white border border-premiumGrayLight rounded-xl overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                <div class="h-44 w-full bg-bgSecondary">
+                    <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=600&auto=format&fit=crop" alt="Capa" class="h-full w-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-[10px] font-black tracking-widest text-premiumGold uppercase mb-3">Rotoline</span>
+                    <h3 class="font-serif text-lg font-normal leading-snug mb-4 flex-grow text-premiumBlack">Como aumentar a produtividade na
+                        
