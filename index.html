@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* --- DESIGN EDITORIAL SÊNIOR: GRAFITE & DOURADO --- */
+        /* --- DESIGN EDITORIAL: GRAFITE & DOURADO FOSCO --- */
         :root {
-            --bg-principal: #fdfcf9; /* Creme/off-white clássico de revista */
+            --bg-principal: #fdfcf9; /* Creme sutil/off-white de páginas impressas */
             --bg-card: #ffffff; 
-            --cor-primaria: #1a1c1e; /* Grafite escuro profundo e sofisticado */
+            --cor-primaria: #1a1c1e; /* Grafite profundo, sóbrio e elegante */
             --cor-detalhe: #b89047; /* Dourado fosco refinado */
             --texto-secundario: #5d646d; 
             --borda: #e6e2da;
@@ -32,7 +32,7 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-principal);
             color: var(--cor-primaria);
-            line-height: 1.65;
+            line-height: 1.7;
         }
 
         a {
@@ -48,7 +48,7 @@
 
         .titulo-secao {
             font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             font-weight: 600;
             text-align: center;
             margin-bottom: 60px;
@@ -63,7 +63,7 @@
 
         /* --- CABEÇALHO --- */
         header {
-            background-color: rgba(253, 252, 249, 0.92);
+            background-color: rgba(253, 252, 249, 0.95);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
@@ -95,8 +95,8 @@
 
         nav a {
             margin-left: 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.85rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--texto-secundario);
@@ -113,21 +113,21 @@
             grid-template-columns: 1.2fr 0.8fr;
             gap: 60px;
             align-items: center;
-            min-height: 80vh;
+            min-height: 75vh;
             padding-top: 40px;
         }
 
         .hero-conteudo h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 3.8rem;
             font-weight: 600;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 20px;
             letter-spacing: -0.02em;
         }
 
         .hero-conteudo h2 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: var(--cor-detalhe);
             margin-bottom: 25px;
@@ -136,7 +136,7 @@
         }
 
         .hero-conteudo p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--texto-secundario);
             margin-bottom: 40px;
             max-width: 600px;
@@ -151,7 +151,7 @@
             padding: 16px 32px;
             border-radius: 2px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             transition: all 0.3s ease;
@@ -188,7 +188,7 @@
             background-color: #fff;
         }
 
-        /* --- DIFERENCIAL SÊNIOR --- */
+        /* --- MANIFESTO SÊNIOR --- */
         .diferencial {
             background-color: #ffffff;
             border-top: 1px solid var(--borda);
@@ -197,32 +197,32 @@
 
         .diferencial-manifesto {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             text-align: center;
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto 60px;
-            line-height: 1.4;
+            line-height: 1.45;
             color: var(--cor-primaria);
         }
 
         .pilares-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
         .pilar-card {
-            padding: 25px;
-            border-left: 2px solid var(--cor-detalhe);
+            padding: 30px;
+            border-left: 1px solid var(--cor-detalhe);
             background: var(--bg-principal);
         }
 
         .pilar-card h3 {
-            font-size: 1.05rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             color: var(--cor-primaria);
         }
 
@@ -231,39 +231,38 @@
             color: var(--texto-secundario);
         }
 
-        /* --- PROCESSO ESTRATÉGICO --- */
+        /* --- PROCESSO VISUAL --- */
         .fluxo-processo {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
             margin-top: 40px;
-            position: relative;
         }
 
         .etapa {
             background: #fff;
             border: 1px solid var(--borda);
-            padding: 20px;
-            border-radius: 4px;
+            padding: 24px 15px;
+            border-radius: 2px;
             text-align: center;
             flex: 1;
             min-width: 130px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
         }
 
         .etapa-num {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--cor-detalhe);
             font-style: italic;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             display: block;
         }
 
         .etapa-nome {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -271,11 +270,11 @@
 
         .seta-fluxo {
             color: var(--cor-detalhe);
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-weight: 300;
+            font-size: 1.4rem;
         }
 
-        /* --- PROJETOS E EXPERIÊNCIA --- */
+        /* --- CASOS E EXPERIÊNCIA --- */
         .projetos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -293,9 +292,9 @@
         }
 
         .projeto-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             border-color: var(--cor-detalhe);
-            box-shadow: 0 20px 40px rgba(26,28,30,0.05);
+            box-shadow: 0 20px 40px rgba(26,28,30,0.04);
         }
 
         .projeto-info {
@@ -306,15 +305,15 @@
         }
 
         .projeto-logo-container {
-            height: 50px;
+            height: 45px;
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .projeto-logo {
             max-height: 100%;
-            max-width: 140px;
+            max-width: 130px;
             object-fit: contain;
         }
 
@@ -326,30 +325,43 @@
             letter-spacing: -0.01em;
         }
 
-        .projeto-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            background-color: var(--bg-principal);
-            color: var(--cor-primaria);
-            font-size: 0.7rem;
+        .projeto-data {
+            font-size: 0.8rem;
+            color: var(--cor-detalhe);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            padding: 4px 10px;
-            border: 1px solid var(--borda);
+            margin-bottom: 15px;
         }
 
-        .projeto-descricao-senior {
-            font-size: 1rem;
+        .projeto-descricao-humana {
+            font-size: 0.95rem;
             color: var(--texto-secundario);
             margin-bottom: 20px;
         }
 
+        .links-contextuais {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px dashed var(--borda-suave);
+            display: flex;
+            gap: 15px;
+        }
+
+        .link-corporativo {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--cor-primaria);
+            transition: color 0.2s;
+        }
+
+        .link-corporativo:hover {
+            color: var(--cor-detalhe);
+        }
+
+        /* REVISTAS / EDITORIAL */
         .projeto-secao-edicao {
             margin-top: 20px;
             padding-top: 20px;
@@ -357,24 +369,24 @@
         }
 
         .titulo-edicao {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             color: var(--cor-detalhe);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .projeto-detalhes {
             list-style: none;
             color: var(--texto-secundario);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 15px;
         }
 
         .projeto-detalhes li {
-            margin-bottom: 8px;
-            padding-left: 15px;
+            margin-bottom: 6px;
+            padding-left: 12px;
             position: relative;
         }
 
@@ -405,7 +417,7 @@
             color: white;
         }
 
-        /* --- CONTATO (LINKS OCULTOS / MASKED) --- */
+        /* --- CONTATO (MASKED LINKS) --- */
         .contato-wrapper {
             text-align: center;
             max-width: 700px;
@@ -420,16 +432,16 @@
 
         .contato-botoes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
         .btn-contato-link {
             background-color: #ffffff;
             border: 1px solid var(--borda);
-            padding: 18px;
+            padding: 20px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             display: flex;
@@ -443,12 +455,12 @@
             border-color: var(--cor-detalhe);
             color: var(--cor-detalhe);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
         }
 
         footer {
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             border-top: 1px solid var(--borda);
             font-size: 0.85rem;
             color: var(--texto-secundario);
@@ -471,9 +483,9 @@
         <div class="nav-container">
             <div class="logo">kelin<span>regina</span></div>
             <nav>
-                <a href="#posicionamento">Estratégia</a>
+                <a href="#posicionamento">Diferencial</a>
                 <a href="#processo">Processo</a>
-                <a href="#projetos">Casos</a>
+                <a href="#casos">Atuação</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
@@ -484,50 +496,54 @@
             <div class="hero-conteudo">
                 <h1>Kelin Regina</h1>
                 <h2>Inteligência Editorial & Estratégia de Conteúdo</h2>
-                <p>Dando forma, clareza e propósito à informação. Uma abordagem sênior especializada em transformar conhecimento complexo em comunicação de alto valor.</p>
+                <p>Especialista em comunicar. Minha atuação consiste em dar forma, clareza e propósito ao conhecimento, transformando dados complexos em narrativas institucionais estruturadas de ponta a ponta.</p>
                 <div class="botoes-grupo">
-                    <a href="#projetos" class="btn btn-primario">Explorar Portfólio</a>
-                    <a href="#contato" class="btn btn-secundario">Iniciar Projeto</a>
+                    <a href="#casos" class="btn btn-primario">Ver Projetos</a>
+                    <a href="#contato" class="btn btn-secundario">Contato</a>
                 </div>
             </div>
             <div class="hero-imagem">
-                <img src="https://raw.githubusercontent.com/kelinregina-wirth/portfolio/main/foto-capa-portfolio.png" alt="Kelin Regina" class="foto-perfil" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop'">
+                <img src="https://raw.githubusercontent.com/kelinregina-wirth/portfolio/main/foto-capa-portfolio.png" alt="Kelin Regina" class="foto-perfil" onerror="this.src='foto-capa-portfolio.png'">
             </div>
         </section>
 
         <section id="posicionamento" class="diferencial">
             <div class="diferencial-manifesto">
-                "Mais do que produzir palavras, eu gerencio o ciclo completo da informação, conectando estratégia institucional e técnica para múltiplos canais."
+                "Não se trata apenas de redigir. Minha entrega está na curadoria completa do ciclo da informação, garantindo rigor técnico e alinhamento estratégico em cada canal."
             </div>
             <div class="pilares-grid">
-                <div class="pilar-card"><h3>Pesquisa & Apuração</h3><p>Imersão analítica para extrair dados técnicos e transformá-los em narrativas claras.</p></div>
-                <div class="pilar-card"><h3>Planejamento & Roteiro</h3><p>Arquitetura de conteúdo focada em objetivos de negócio e posicionamento premium.</p></div>
-                <div class="pilar-card"><h3>Adaptação Multi-canal</h3><p>Transposição precisa de mensagens para formatos corporativos, B2B, técnicos ou jornalísticos.</p></div>
-                <div class="pilar-card"><h3>SEO & Localização</h3><p>Otimização fina para visibilidade orgânica e suporte estratégico para novos idiomas.</p></div>
+                <div class="pilar-card">
+                    <h3>Ciclo de Ponta a Ponta</h3>
+                    <p>Domínio pleno desde a imersão em pesquisa, roteirização, planejamento de canais e produção textual até a revisão refinada e técnicas avançadas de SEO.</p>
+                </div>
+                <div class="pilar-card">
+                    <h3>Canais e Localização</h3>
+                    <p>Adaptação cirúrgica de mensagens complexas para ambientes institucionais, mídias digitais de alta performance e suporte estratégico à localização para novos idiomas.</p>
+                </div>
             </div>
         </section>
 
         <section id="processo">
-            <h2 class="titulo-secao">O Ciclo <span>Editorial</span></h2>
+            <h2 class="titulo-secao">O Processo <span>Estratégico</span></h2>
             <div class="fluxo-processo">
-                <div class="etapa"><span class="etapa-num">01</span><div class="etapa-nome">Pesquisa</div></div>
-                <div class="seta-fluxo">→</div>
-                <div class="etapa"><span class="etapa-num">02</span><div class="etapa-nome">Planejamento</div></div>
-                <div class="seta-fluxo">→</div>
-                <div class="etapa"><span class="etapa-num">03</span><div class="etapa-nome">Escrita</div></div>
-                <div class="seta-fluxo">→</div>
-                <div class="etapa"><span class="etapa-num">04</span><div class="etapa-nome">Adaptação</div></div>
-                <div class="seta-fluxo">→</div>
-                <div class="etapa"><span class="etapa-num">05</span><div class="etapa-nome">Revisão</div></div>
-                <div class="seta-fluxo">→</div>
-                <div class="etapa"><span class="etapa-num">06</span><div class="etapa-nome">Publicação</div></div>
-                <div class="seta-fluxo">→</div>
-                <div class="etapa"><span class="etapa-num">07</span><div class="etapa-nome">Distribuição</div></div>
+                <div class="etapa"><span class="etapa-num">I</span><div class="etapa-nome">Pesquisa</div></div>
+                <div class="seta-fluxo">↓</div>
+                <div class="etapa"><span class="etapa-num">II</span><div class="etapa-nome">Planejamento</div></div>
+                <div class="seta-fluxo">↓</div>
+                <div class="etapa"><span class="etapa-num">III</span><div class="etapa-nome">Escrita</div></div>
+                <div class="seta-fluxo">↓</div>
+                <div class="etapa"><span class="etapa-num">IV</span><div class="etapa-nome">Adaptação</div></div>
+                <div class="seta-fluxo">↓</div>
+                <div class="etapa"><span class="etapa-num">V</span><div class="etapa-nome">Revisão</div></div>
+                <div class="seta-fluxo">↓</div>
+                <div class="etapa"><span class="etapa-num">VI</span><div class="etapa-nome">Publicação</div></div>
+                <div class="seta-fluxo">↓</div>
+                <div class="etapa"><span class="etapa-num">VII</span><div class="etapa-nome">Distribuição</div></div>
             </div>
         </section>
 
-        <section id="projetos">
-            <h2 class="titulo-secao">Casos de <span>Sucesso</span></h2>
+        <section id="casos">
+            <h2 class="titulo-secao">Atuação & <span>Trajetória</span></h2>
             <div class="projetos-grid">
 
                 <div class="projeto-card">
@@ -535,18 +551,25 @@
                         <div class="projeto-logo-container">
                             <img src="Redesul.webp" alt="Logo Redesul" class="projeto-logo" onerror="this.src='assets/Redesul.webp'">
                         </div>
-                        <div class="projeto-tags"><span class="tag">Comunicação Institucional</span><span class="tag">Planejamento</span></div>
-                        <p class="projeto-descricao-senior">Atuação estratégica na unificação da linguagem corporativa e no desenvolvimento de fluxos informativos de alta complexidade do setor de investimentos e consórcios.</p>
+                        <div class="projeto-data">Julho de 2025 – Junho 2026 </div>
+                        <p class="projeto-descricao-humana">Realizei o mapeamento de cronogramas para redes sociais, a roteirização de conteúdos em vídeo para canais como o YouTube, bem como para vídeos curtos para reels. Minha atuação une a otimização de SEO com uma escrita próxima e fluida para aproximar o ecossistema de investimentos do público.</p>
+                        <div class="links-contextuais">
+                            <a href="#" target="_blank" class="link-corporativo">↗ Ver Redes Sociais</a>
+                            <a href="#" target="_blank" class="link-corporativo">↗ YouTube</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="projeto-card">
                     <div class="projeto-info">
                         <div class="projeto-logo-container">
-                            <img src="Venko.webp" alt="Logo Venko" class="projeto-logo" onerror="this.src='assets/Venko.webp'">
+                            <div class="projeto-logo-texto">Life Agro</div>
                         </div>
-                        <div class="projeto-tags"><span class="tag">Estratégia B2B</span><span class="tag">Roteirização</span></div>
-                        <p class="projeto-descricao-senior">Estruturação completa de posicionamento para o mercado financeiro corporativo de crédito, desenhando roteiros de comunicação integrados e de alto impacto de marca.</p>
+                        <div class="projeto-data">Agosto de 2024 – Janeiro de 2025</div>
+                        <p class="projeto-descricao-humana">Fui responsável por extrair o conhecimento técnico do agronegócio e traduzi-lo em artigos institucionais acessíveis para o blog. Paralelamente, atuei na curadoria dos canais digitais e no registro fotográfico de agendas de relacionamento com parceiros.</p>
+                        <div class="links-contextuais">
+                            <a href="#" target="_blank" class="link-corporativo">↗ Acessar Blog</a>
+                        </div>
                     </div>
                 </div>
 
@@ -555,8 +578,23 @@
                         <div class="projeto-logo-container">
                             <img src="rotoline.png" alt="Logo Rotoline" class="projeto-logo" onerror="this.src='assets/rotoline.png'">
                         </div>
-                        <div class="projeto-tags"><span class="tag">SEO Sênior</span><span class="tag">Apoio à Localização</span></div>
-                        <p class="projeto-descricao-senior">Pesquisa técnica aprofundada e arquitetura de conteúdo para engenharia industrial global, aliando otimização avançada de SEO com curadoria para adaptação e tradução internacional.</p>
+                        <div class="projeto-data">Fevereiro de 2021 – Agosto de 2024</div>
+                        <p class="projeto-descricao-humana">Estruturei e diagramei materiais comerciais e catálogos técnicos, gerenciei a comunicação interna e apoiei o alinhamento de mensagens institucionais para comitivas e parceiros de negócios internacionais.</p>
+                        <div class="links-contextuais">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-info">
+                        <div class="projeto-logo-container">
+                            <img src="Venko.webp" alt="Logo Venko" class="projeto-logo" onerror="this.src='assets/Venko.webp'">
+                        </div>
+                        <div class="projeto-data">Trabalho desenvolvido na produção de conteúdos</div>
+                        <p class="projeto-descricao-humana">Desenvolvimento de blog posts, textos e roteiros para rede social, relacionados ao mercado financeiro corporativo de antecipação de crédito, transformando jargões complexos em argumentos de posicionamento seguros e transparentes.</p>
+                        <div class="links-contextuais">
+                            <a href="#" target="_blank" class="link-corporativo">↗ Posicionamento</a>
+                        </div>
                     </div>
                 </div>
 
@@ -565,22 +603,22 @@
                         <div class="projeto-logo-container">
                             <div class="projeto-logo-texto">Revista Agro&Negócios</div>
                         </div>
-                        <div class="projeto-tags"><span class="tag">Pesquisa de Campo</span><span class="tag">Ciclo Editorial</span></div>
+                        <div class="projeto-data">Produção Editorial</div>
                         
                         <div class="projeto-secao-edicao">
-                            <div class="titulo-edicao">📖 Edição I</div>
+                            <div class="titulo-edicao">Edição I</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Reportagem & Investigação:</strong> Entrevistas técnicas com especialistas do agronegócio e análises de impacto produtivo regional.</li>
+                                <li>Investigação em campo e entrevistas apuradas com especialistas técnicos da cadeia agropecuária regional.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1ky8vBZHyOlqvBqwMJTHpJSvpoQN6CpWc/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1ky8vBZHyOlqvBqwMJTHpJSvpoQN6CpWc/view?usp=drive_link" target="_blank" class="btn-projeto">Ler matérias da edição ↗</a>
                         </div>
 
                         <div class="projeto-secao-edicao">
-                            <div class="titulo-edicao">📖 Edição II</div>
+                            <div class="titulo-edicao">Edição II</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Reportagem Especial:</strong> Cobertura focada em inovações de bioinsumos e sustentabilidade no agronegócio corporativo.</li>
+                                <li>Reportagens desenvolvidas sobre diversos temas relacionados ao agronegócio no sul do país.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1kxy7wWFIoVkfIpx4kPMoirSAAT9jKrF7/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1kxy7wWFIoVkfIpx4kPMoirSAAT9jKrF7/view?usp=drive_link" target="_blank" class="btn-projeto">Ler conteúdos produzido para esta edição ↗</a>
                         </div>
                     </div>
                 </div>
@@ -590,22 +628,22 @@
                         <div class="projeto-logo-container">
                             <div class="projeto-logo-texto">Revista Casar</div>
                         </div>
-                        <div class="projeto-tags"><span class="tag">Storytelling</span><span class="tag">Design de Narrativa</span></div>
+                        <div class="projeto-data">Design de Narrativa</div>
                         
                         <div class="projeto-secao-edicao">
-                            <div class="titulo-edicao">📖 Edição I</div>
+                            <div class="titulo-edicao">Edição I</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Produção de Conteúdo:</strong> Artigos focados nas mudanças de comportamento do mercado premium e no consumo de experiências de luxo.</li>
+                                <li>Produção de reportagens e perfis sobre o universo de casamentos e festas.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1iWjgCTZ6y9-5CJ42Pm15Kuqg7sF71Bt1/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1iWjgCTZ6y9-5CJ42Pm15Kuqg7sF71Bt1/view?usp=drive_link" target="_blank" class="btn-projeto">Ler edição Completa ↗</a>
                         </div>
 
                         <div class="projeto-secao-edicao">
-                            <div class="titulo-edicao">📖 Edição II</div>
+                            <div class="titulo-edicao">Edição II</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Curadoria Editorial:</strong> Crônicas autorais e matérias conceituais sobre planejamento e cadeias de valor em grandes eventos.</li>
+                                <li>Conteúdos voltados para a curadoria de fornecedores de alta costura e dinâmicas de grandes celebrações.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1s7T0k6_ZW3RbFoPftxk1Q9imjX4LuX0p/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1s7T0k6_ZW3RbFoPftxk1Q9imjX4LuX0p/view?usp=drive_link" target="_blank" class="btn-projeto">Ler Matérias desta edição ↗</a>
                         </div>
                     </div>
                 </div>
@@ -615,19 +653,19 @@
 
         <section id="contato">
             <div class="contato-wrapper">
-                <h2 class="titulo-secao">Contato <span>Estratégico</span></h2>
-                <p>Disponível para consultorias editoriais, projetos corporativos de grande porte e liderança de conteúdo de marca.</p>
+                <h2 class="titulo-secao">Conexão <span>Estratégica</span></h2>
+                <p>Para o desenvolvimento de ecossistemas de conteúdo, curadorias editoriais ou posicionamento de marcas corporativas.</p>
                 <div class="contato-botoes">
                     <a href="mailto:kelinreginaw@gmail.com" class="btn-contato-link">✉️ E-mail Profissional</a>
-                    <a href="https://wa.me/5549988853206" target="_blank" class="btn-contato-link">💬 Canal WhatsApp</a>
-                    <a href="https://www.linkedin.com/in/kelin-regina-w/" target="_blank" class="btn-contato-link">💼 Perfil LinkedIn</a>
+                    <a href="https://wa.me/5549988853206" target="_blank" class="btn-contato-link">💬 WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/kelin-regina-w/" target="_blank" class="btn-contato-link">💼 LinkedIn</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Kelin Regina. Todos os direitos reservados. Inteligência Editorial & Design de Informação.</p>
+        <p>&copy; 2026 Kelin Regina. Inteligência Editorial & Design de Informação.</p>
     </footer>
 
 </body>
