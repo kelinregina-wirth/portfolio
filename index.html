@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelin Regina | Portfólio de Marketing & Conteúdo</title>
+    <title>Kelin Regina | Inteligência Editorial & Estratégia de Conteúdo</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* --- PALETA DE CORES (REFERÊNCIA EDITORIAL) --- */
+        /* --- DESIGN EDITORIAL SÊNIOR: GRAFITE & DOURADO --- */
         :root {
-            --bg-principal: #fdfcf9; /* Off-white creme */
+            --bg-principal: #fdfcf9; /* Creme/off-white clássico de revista */
             --bg-card: #ffffff; 
-            --texto-principal: #1c1e21; /* Grafite elegante */
-            --texto-secundario: #5c626a; 
-            --cor-primaria: #1b3d2f; /* Verde profundo */
-            --cor-detalhe: #c29c5b; /* Dourado sofisticado */
-            --borda: #eae7e1;
+            --cor-primaria: #1a1c1e; /* Grafite escuro profundo e sofisticado */
+            --cor-detalhe: #b89047; /* Dourado fosco refinado */
+            --texto-secundario: #5d646d; 
+            --borda: #e6e2da;
+            --borda-suave: #f1eee9;
         }
 
-        /* --- ESTILOS GERAIS --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -32,8 +31,8 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-principal);
-            color: var(--texto-principal);
-            line-height: 1.6;
+            color: var(--cor-primaria);
+            line-height: 1.65;
         }
 
         a {
@@ -42,18 +41,18 @@
         }
 
         section {
-            padding: 100px 20px;
-            max-width: 1100px;
+            padding: 120px 20px;
+            max-width: 1140px;
             margin: 0 auto;
         }
 
         .titulo-secao {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.6rem;
+            font-weight: 600;
             text-align: center;
-            margin-bottom: 50px;
-            color: var(--cor-primaria);
+            margin-bottom: 60px;
+            letter-spacing: -0.01em;
         }
 
         .titulo-secao span {
@@ -64,7 +63,7 @@
 
         /* --- CABEÇALHO --- */
         header {
-            background-color: rgba(253, 252, 249, 0.9);
+            background-color: rgba(253, 252, 249, 0.92);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
@@ -73,84 +72,89 @@
         }
 
         .nav-container {
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 24px 20px;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            color: var(--cor-primaria);
+            letter-spacing: -0.03em;
         }
 
         .logo span {
             color: var(--cor-detalhe);
+            font-weight: 400;
+            font-style: italic;
         }
 
         nav a {
-            margin-left: 25px;
-            font-size: 0.95rem;
+            margin-left: 30px;
+            font-size: 0.9rem;
             font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             color: var(--texto-secundario);
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--cor-primaria);
+            color: var(--cor-detalhe);
         }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
+            gap: 60px;
             align-items: center;
-            min-height: 75vh;
-            padding-top: 60px;
+            min-height: 80vh;
+            padding-top: 40px;
         }
 
         .hero-conteudo h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
-            font-weight: 700;
-            line-height: 1.15;
-            margin-bottom: 15px;
-            color: var(--cor-primaria);
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
         }
 
         .hero-conteudo h2 {
-            font-size: 1.3rem;
-            font-weight: 500;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--cor-detalhe);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.12em;
         }
 
         .hero-conteudo p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--texto-secundario);
-            margin-bottom: 35px;
-            max-width: 580px;
+            margin-bottom: 40px;
+            max-width: 600px;
         }
 
         .botoes-grupo {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         .btn {
-            padding: 14px 28px;
-            border-radius: 4px;
+            padding: 16px 32px;
+            border-radius: 2px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             transition: all 0.3s ease;
-            display: inline-block;
         }
 
         .btn-primario {
@@ -159,135 +163,196 @@
         }
 
         .btn-primario:hover {
-            background-color: #11261d;
+            background-color: var(--cor-detalhe);
             transform: translateY(-2px);
         }
 
         .btn-secundario {
-            border: 1px solid var(--cor-detalhe);
-            color: var(--texto-principal);
-            background-color: transparent;
+            border: 1px solid var(--cor-primaria);
+            color: var(--cor-primaria);
         }
 
         .btn-secundario:hover {
-            background-color: var(--cor-detalhe);
-            color: white;
+            border-color: var(--cor-detalhe);
+            color: var(--cor-detalhe);
             transform: translateY(-2px);
         }
 
         .foto-perfil {
-            width: 320px;
-            height: 320px;
+            width: 340px;
+            height: 340px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--cor-detalhe);
-        }
-
-        /* --- SOBRE MIM --- */
-        .sobre-grid {
-            display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
-            gap: 60px;
-        }
-
-        .sobre-texto p {
-            color: var(--texto-secundario);
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        .sobre-meta-dados {
-            background-color: var(--bg-card);
-            padding: 30px;
-            border-radius: 4px;
             border: 1px solid var(--borda);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            padding: 8px;
+            background-color: #fff;
         }
 
-        .meta-item strong {
+        /* --- DIFERENCIAL SÊNIOR --- */
+        .diferencial {
+            background-color: #ffffff;
+            border-top: 1px solid var(--borda);
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .diferencial-manifesto {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 60px;
+            line-height: 1.4;
             color: var(--cor-primaria);
-            display: block;
-            font-size: 0.85rem;
+        }
+
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pilar-card {
+            padding: 25px;
+            border-left: 2px solid var(--cor-detalhe);
+            background: var(--bg-principal);
+        }
+
+        .pilar-card h3 {
+            font-size: 1.05rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 2px;
+            margin-bottom: 8px;
+            color: var(--cor-primaria);
         }
 
-        /* --- PROJETOS EM DESTAQUE --- */
+        .pilar-card p {
+            font-size: 0.95rem;
+            color: var(--texto-secundario);
+        }
+
+        /* --- PROCESSO ESTRATÉGICO --- */
+        .fluxo-processo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .etapa {
+            background: #fff;
+            border: 1px solid var(--borda);
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            flex: 1;
+            min-width: 130px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+        }
+
+        .etapa-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--cor-detalhe);
+            font-style: italic;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .etapa-nome {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .seta-fluxo {
+            color: var(--cor-detalhe);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* --- PROJETOS E EXPERIÊNCIA --- */
         .projetos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
         }
 
         .projeto-card {
             background-color: var(--bg-card);
             border: 1px solid var(--borda);
-            border-radius: 4px;
+            border-radius: 2px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .projeto-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
             border-color: var(--cor-detalhe);
-            box-shadow: 0 12px 24px rgba(27,61,47,0.04);
+            box-shadow: 0 20px 40px rgba(26,28,30,0.05);
         }
 
         .projeto-info {
-            padding: 30px;
+            padding: 35px;
             display: flex;
             flex-direction: column;
             height: 100%;
         }
 
-        /* CONTAINER DOS LOGOTIPOS */
         .projeto-logo-container {
-            height: 55px;
+            height: 50px;
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .projeto-logo {
             max-height: 100%;
-            max-width: 150px;
+            max-width: 140px;
             object-fit: contain;
         }
 
         .projeto-logo-texto {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 600;
             color: var(--cor-primaria);
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
         }
 
         .projeto-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             margin-bottom: 20px;
         }
 
         .tag {
-            background-color: #f4f6f5;
+            background-color: var(--bg-principal);
             color: var(--cor-primaria);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             padding: 4px 10px;
-            border-radius: 2px;
-            border: 1px solid #e1e6e4;
+            border: 1px solid var(--borda);
         }
 
-        /* DIVISÃO POR EDIÇÃO EM REVISTAS */
+        .projeto-descricao-senior {
+            font-size: 1rem;
+            color: var(--texto-secundario);
+            margin-bottom: 20px;
+        }
+
         .projeto-secao-edicao {
-            margin-top: 15px;
-            padding-top: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
             border-top: 1px dashed var(--borda);
         }
 
@@ -297,37 +362,35 @@
             color: var(--cor-detalhe);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            margin-bottom: 10px;
         }
 
         .projeto-detalhes {
             list-style: none;
             color: var(--texto-secundario);
             font-size: 0.95rem;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .projeto-detalhes li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             padding-left: 15px;
             position: relative;
         }
 
         .projeto-detalhes li::before {
-            content: "•";
+            content: "—";
             color: var(--cor-detalhe);
             position: absolute;
             left: 0;
         }
 
         .btn-projeto {
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 8px 16px;
             background-color: transparent;
             border: 1px solid var(--cor-primaria);
             color: var(--cor-primaria);
@@ -342,26 +405,63 @@
             color: white;
         }
 
-        /* --- OUTRAS SEÇÕES --- */
-        .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-        .servico-card { background-color: var(--bg-card); border: 1px solid var(--borda); padding: 30px 25px; border-radius: 4px; transition: all 0.3s; }
-        .servico-card:hover { border-color: var(--cor-detalhe); transform: translateY(-4px); }
-        .servico-icone { font-size: 1.5rem; margin-bottom: 10px; display: inline-block; }
-        
-        .hab-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-        .hab-tag { background-color: var(--bg-card); border: 1px solid var(--borda); padding: 10px 22px; border-radius: 4px; font-size: 0.95rem; font-weight: 500; }
-        
-        .contato-wrapper { text-align: center; max-width: 600px; margin: 0 auto; }
-        .contato-botoes { display: flex; flex-direction: column; gap: 15px; }
-        .btn-contato-link { background-color: var(--bg-card); border: 1px solid var(--borda); padding: 15px; border-radius: 4px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        /* --- CONTATO (LINKS OCULTOS / MASKED) --- */
+        .contato-wrapper {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-        footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--borda); font-size: 0.9rem; color: var(--texto-secundario); background-color: #ffffff; }
+        .contato-wrapper p {
+            color: var(--texto-secundario);
+            font-size: 1.15rem;
+            margin-bottom: 50px;
+        }
+
+        .contato-botoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .btn-contato-link {
+            background-color: #ffffff;
+            border: 1px solid var(--borda);
+            padding: 18px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-contato-link:hover {
+            border-color: var(--cor-detalhe);
+            color: var(--cor-detalhe);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid var(--borda);
+            font-size: 0.85rem;
+            color: var(--texto-secundario);
+            background-color: #ffffff;
+            letter-spacing: 0.03em;
+        }
 
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
             .botoes-grupo { justify-content: center; }
-            .sobre-grid { grid-template-columns: 1fr; }
-            .nav-container { flex-direction: column; gap: 15px; }
+            .fluxo-processo { flex-direction: column; gap: 10px; }
+            .seta-fluxo { transform: rotate(90deg); margin: 5px 0; }
+            .nav-container { flex-direction: column; gap: 20px; }
         }
     </style>
 </head>
@@ -371,10 +471,9 @@
         <div class="nav-container">
             <div class="logo">kelin<span>regina</span></div>
             <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#o-que-faco">Atuação</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#habilidades">Habilidades</a>
+                <a href="#posicionamento">Estratégia</a>
+                <a href="#processo">Processo</a>
+                <a href="#projetos">Casos</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
@@ -384,83 +483,80 @@
         <section class="hero">
             <div class="hero-conteudo">
                 <h1>Kelin Regina</h1>
-                <h2>Marketing Digital & Comunicação Editorial</h2>
-                <p>Transformando estratégia e escrita jornalística em conteúdo corporativo de alto valor e foco em resultados orgânicos.</p>
+                <h2>Inteligência Editorial & Estratégia de Conteúdo</h2>
+                <p>Dando forma, clareza e propósito à informação. Uma abordagem sênior especializada em transformar conhecimento complexo em comunicação de alto valor.</p>
                 <div class="botoes-grupo">
-                    <a href="#projetos" class="btn btn-primario">Ver portfólio</a>
-                    <a href="#contato" class="btn btn-secundario">Contato</a>
+                    <a href="#projetos" class="btn btn-primario">Explorar Portfólio</a>
+                    <a href="#contato" class="btn btn-secundario">Iniciar Projeto</a>
                 </div>
             </div>
             <div class="hero-imagem">
-                <img src="assets/foto.jpg" alt="Foto de Kelin Regina" class="foto-perfil" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop'">
+                <img src="https://raw.githubusercontent.com/kelinregina-wirth/portfolio/main/foto-capa-portfolio.png" alt="Kelin Regina" class="foto-perfil" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop'">
             </div>
         </section>
 
-        <section id="sobre">
-            <h2 class="titulo-secao">Sobre <span>Mim</span></h2>
-            <div class="sobre-grid">
-                <div class="sobre-texto">
-                    <p>Sou profissional de Marketing e Comunicação com sólida bagagem em produção de conteúdo de marca, copywriting, SEO e jornalismo editorial.</p>
-                    <p>Minha trajetória une a precisão e apuração técnica do jornalismo impresso com o dinamismo das estratégias digitais corporativas, criando narrativas fortes para os setores de agronegócio, finanças e tecnologia.</p>
-                </div>
-                <div class="sobre-meta-dados">
-                    <div class="meta-item"><strong>Localização</strong>📍 Chapecó – SC</div>
-                    <div class="meta-item"><strong>Experiência</strong>🚀 +5 Anos de Atuação</div>
-                    <div class="meta-item"><strong>Especialidade</strong>💼 Conteúdo e Storytelling</div>
-                </div>
+        <section id="posicionamento" class="diferencial">
+            <div class="diferencial-manifesto">
+                "Mais do que produzir palavras, eu gerencio o ciclo completo da informação, conectando estratégia institucional e técnica para múltiplos canais."
+            </div>
+            <div class="pilares-grid">
+                <div class="pilar-card"><h3>Pesquisa & Apuração</h3><p>Imersão analítica para extrair dados técnicos e transformá-los em narrativas claras.</p></div>
+                <div class="pilar-card"><h3>Planejamento & Roteiro</h3><p>Arquitetura de conteúdo focada em objetivos de negócio e posicionamento premium.</p></div>
+                <div class="pilar-card"><h3>Adaptação Multi-canal</h3><p>Transposição precisa de mensagens para formatos corporativos, B2B, técnicos ou jornalísticos.</p></div>
+                <div class="pilar-card"><h3>SEO & Localização</h3><p>Otimização fina para visibilidade orgânica e suporte estratégico para novos idiomas.</p></div>
             </div>
         </section>
 
-        <section id="o-que-faco">
-            <h2 class="titulo-secao">Áreas de <span>Atuação</span></h2>
-            <div class="servicos-grid">
-                <div class="servico-card"><span class="servico-icone">📰</span><h3>Redação Editorial</h3></div>
-                <div class="servico-card"><span class="servico-icone">✍️</span><h3>Copywriting</h3></div>
-                <div class="servico-card"><span class="servico-icone">🔍</span><h3>Estratégia SEO</h3></div>
-                <div class="servico-card"><span class="servico-icone">💼</span><h3>Comunicação Corporativa</h3></div>
+        <section id="processo">
+            <h2 class="titulo-secao">O Ciclo <span>Editorial</span></h2>
+            <div class="fluxo-processo">
+                <div class="etapa"><span class="etapa-num">01</span><div class="etapa-nome">Pesquisa</div></div>
+                <div class="seta-fluxo">→</div>
+                <div class="etapa"><span class="etapa-num">02</span><div class="etapa-nome">Planejamento</div></div>
+                <div class="seta-fluxo">→</div>
+                <div class="etapa"><span class="etapa-num">03</span><div class="etapa-nome">Escrita</div></div>
+                <div class="seta-fluxo">→</div>
+                <div class="etapa"><span class="etapa-num">04</span><div class="etapa-nome">Adaptação</div></div>
+                <div class="seta-fluxo">→</div>
+                <div class="etapa"><span class="etapa-num">05</span><div class="etapa-nome">Revisão</div></div>
+                <div class="seta-fluxo">→</div>
+                <div class="etapa"><span class="etapa-num">06</span><div class="etapa-nome">Publicação</div></div>
+                <div class="seta-fluxo">→</div>
+                <div class="etapa"><span class="etapa-num">07</span><div class="etapa-nome">Distribuição</div></div>
             </div>
         </section>
 
         <section id="projetos">
-            <h2 class="titulo-secao">Projetos em <span>Destaque</span></h2>
+            <h2 class="titulo-secao">Casos de <span>Sucesso</span></h2>
             <div class="projetos-grid">
 
                 <div class="projeto-card">
                     <div class="projeto-info">
                         <div class="projeto-logo-container">
-                            <img src="assets/Redesul.webp" alt="Logo Redesul Consórcios" class="projeto-logo">
+                            <img src="Redesul.webp" alt="Logo Redesul" class="projeto-logo" onerror="this.src='assets/Redesul.webp'">
                         </div>
-                        <div class="projeto-tags"><span class="tag">Estratégia</span><span class="tag">Copywriting</span></div>
-                        <ul class="projeto-detalhes">
-                            <li>Desenvolvimento de tom de voz institucional.</li>
-                            <li>Criação de copys focadas em conversão financeira para consórcios.</li>
-                        </ul>
+                        <div class="projeto-tags"><span class="tag">Comunicação Institucional</span><span class="tag">Planejamento</span></div>
+                        <p class="projeto-descricao-senior">Atuação estratégica na unificação da linguagem corporativa e no desenvolvimento de fluxos informativos de alta complexidade do setor de investimentos e consórcios.</p>
                     </div>
                 </div>
 
                 <div class="projeto-card">
                     <div class="projeto-info">
                         <div class="projeto-logo-container">
-                            <img src="assets/Venko.webp" alt="Logo Venko Credit" class="projeto-logo">
+                            <img src="Venko.webp" alt="Logo Venko" class="projeto-logo" onerror="this.src='assets/Venko.webp'">
                         </div>
-                        <div class="projeto-tags"><span class="tag">Planejamento Editorial</span><span class="tag">B2B</span></div>
-                        <ul class="projeto-detalhes">
-                            <li>Estruturação de cronogramas integrados de publicação corporativa.</li>
-                            <li>Posicionamento digital premium focado no mercado de antecipação e finanças.</li>
-                        </ul>
+                        <div class="projeto-tags"><span class="tag">Estratégia B2B</span><span class="tag">Roteirização</span></div>
+                        <p class="projeto-descricao-senior">Estruturação completa de posicionamento para o mercado financeiro corporativo de crédito, desenhando roteiros de comunicação integrados e de alto impacto de marca.</p>
                     </div>
                 </div>
 
                 <div class="projeto-card">
                     <div class="projeto-info">
                         <div class="projeto-logo-container">
-                            <img src="assets/rotoline.png" alt="Logo Rotoline" class="projeto-logo">
+                            <img src="rotoline.png" alt="Logo Rotoline" class="projeto-logo" onerror="this.src='assets/rotoline.png'">
                         </div>
-                        <div class="projeto-tags"><span class="tag">SEO</span><span class="tag">Content Marketing</span></div>
-                        <ul class="projeto-detalhes">
-                            <li>Criação e redação técnica de artigos otimizados para mecanismos de busca.</li>
-                            <li>Posicionamento de autoridade digital voltado para o setor industrial.</li>
-                        </ul>
+                        <div class="projeto-tags"><span class="tag">SEO Sênior</span><span class="tag">Apoio à Localização</span></div>
+                        <p class="projeto-descricao-senior">Pesquisa técnica aprofundada e arquitetura de conteúdo para engenharia industrial global, aliando otimização avançada de SEO com curadoria para adaptação e tradução internacional.</p>
                     </div>
                 </div>
 
@@ -469,25 +565,22 @@
                         <div class="projeto-logo-container">
                             <div class="projeto-logo-texto">Revista Agro&Negócios</div>
                         </div>
-                        <div class="projeto-tags">
-                            <span class="tag">Jornalismo Impresso</span>
-                            <span class="tag">Agronegócio</span>
-                        </div>
+                        <div class="projeto-tags"><span class="tag">Pesquisa de Campo</span><span class="tag">Ciclo Editorial</span></div>
                         
                         <div class="projeto-secao-edicao">
                             <div class="titulo-edicao">📖 Edição I</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Reportagem Associada:</strong> Investigação jornalística especializada em campo, entrevistas com especialistas do setor agropecuário e análise de produtividade regional.</li>
+                                <li><strong>Reportagem & Investigação:</strong> Entrevistas técnicas com especialistas do agronegócio e análises de impacto produtivo regional.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1ky8vBZHyOlqvBqwMJTHpJSvpoQN6CpWc/view?usp=drive_link" target="_blank" class="btn-projeto">Ler Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1ky8vBZHyOlqvBqwMJTHpJSvpoQN6CpWc/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
                         </div>
 
                         <div class="projeto-secao-edicao">
                             <div class="titulo-edicao">📖 Edição II</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Reportagem Associada:</strong> Cobertura focada nas inovações tecnológicas do mercado de insumos e tendências sustentáveis do agronegócio nacional.</li>
+                                <li><strong>Reportagem Especial:</strong> Cobertura focada em inovações de bioinsumos e sustentabilidade no agronegócio corporativo.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1kxy7wWFIoVkfIpx4kPMoirSAAT9jKrF7/view?usp=drive_link" target="_blank" class="btn-projeto">Ler Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1kxy7wWFIoVkfIpx4kPMoirSAAT9jKrF7/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
                         </div>
                     </div>
                 </div>
@@ -497,25 +590,22 @@
                         <div class="projeto-logo-container">
                             <div class="projeto-logo-texto">Revista Casar</div>
                         </div>
-                        <div class="projeto-tags">
-                            <span class="tag">Redação Editorial</span>
-                            <span class="tag">Storytelling</span>
-                        </div>
+                        <div class="projeto-tags"><span class="tag">Storytelling</span><span class="tag">Design de Narrativa</span></div>
                         
                         <div class="projeto-secao-edicao">
                             <div class="titulo-edicao">📖 Edição I</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Reportagem Associada:</strong> Matérias com foco no comportamento do consumidor de luxo, mercado de festas e tendências de alta costura.</li>
+                                <li><strong>Produção de Conteúdo:</strong> Artigos focados nas mudanças de comportamento do mercado premium e no consumo de experiências de luxo.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1iWjgCTZ6y9-5CJ42Pm15Kuqg7sF71Bt1/view?usp=drive_link" target="_blank" class="btn-projeto">Ler Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1iWjgCTZ6y9-5CJ42Pm15Kuqg7sF71Bt1/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
                         </div>
 
                         <div class="projeto-secao-edicao">
                             <div class="titulo-edicao">📖 Edição II</div>
                             <ul class="projeto-detalhes">
-                                <li><strong>Reportagem Associada:</strong> Artigo focado no planejamento de grandes eventos, curadoria de fornecedores e aplicação prática de crônicas afetivas.</li>
+                                <li><strong>Curadoria Editorial:</strong> Crônicas autorais e matérias conceituais sobre planejamento e cadeias de valor em grandes eventos.</li>
                             </ul>
-                            <a href="https://drive.google.com/file/d/1s7T0k6_ZW3RbFoPftxk1Q9imjX4LuX0p/view?usp=drive_link" target="_blank" class="btn-projeto">Ler Matéria Completa ↗</a>
+                            <a href="https://drive.google.com/file/d/1s7T0k6_ZW3RbFoPftxk1Q9imjX4LuX0p/view?usp=drive_link" target="_blank" class="btn-projeto">Acessar Matéria Completa ↗</a>
                         </div>
                     </div>
                 </div>
@@ -523,31 +613,21 @@
             </div>
         </section>
 
-        <section id="habilidades">
-            <h2 class="titulo-secao">Minhas <span>Habilidades</span></h2>
-            <div class="hab-grid">
-                <div class="hab-tag">SEO & Copywriting</div>
-                <div class="hab-tag">Planejamento Editorial</div>
-                <div class="hab-tag">Jornalismo & Apuração</div>
-                <div class="hab-tag">Inbound Marketing</div>
-                <div class="hab-tag">Gestão de Canais Corporativos</div>
-            </div>
-        </section>
-
         <section id="contato">
             <div class="contato-wrapper">
-                <h2 class="titulo-secao">Vamos Criar <span>Histórias?</span></h2>
-                <p>Entre em contato para alinhar novos projetos de conteúdo, marketing ou consultoria de comunicação.</p>
+                <h2 class="titulo-secao">Contato <span>Estratégico</span></h2>
+                <p>Disponível para consultorias editoriais, projetos corporativos de grande porte e liderança de conteúdo de marca.</p>
                 <div class="contato-botoes">
-                    <a href="mailto:seu-email@exemplo.com" class="btn-contato-link">✉️ seu-email@exemplo.com</a>
-                    <a href="https://linkedin.com/in/seu-perfil" target="_blank" class="btn-contato-link">💼 Conectar no LinkedIn</a>
+                    <a href="mailto:kelinreginaw@gmail.com" class="btn-contato-link">✉️ E-mail Profissional</a>
+                    <a href="https://wa.me/5549988853206" target="_blank" class="btn-contato-link">💬 Canal WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/kelin-regina-w/" target="_blank" class="btn-contato-link">💼 Perfil LinkedIn</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Kelin Regina. Comunicação estratégica com excelência editorial.</p>
+        <p>&copy; 2026 Kelin Regina. Todos os direitos reservados. Inteligência Editorial & Design de Informação.</p>
     </footer>
 
 </body>
